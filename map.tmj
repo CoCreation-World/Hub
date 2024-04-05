@@ -2863,7 +2863,7 @@
                  "height":68,
                  "id":66,
                  "name":"Inner Shadow MAP",
-                 "opacity":1,
+                 "opacity":0.85,
                  "type":"tilelayer",
                  "visible":true,
                  "width":46,
