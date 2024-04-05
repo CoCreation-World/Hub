@@ -3335,9 +3335,7 @@
                  "probability":0.4
                 }],
          "tilewidth":32
-        }, 
-        
-      
+        },
         {
          "columns":46,
          "firstgid":10055,
@@ -3389,9 +3387,7 @@
          "tilecount":3128,
          "tileheight":32,
          "tilewidth":32
-        }, 
-        
-        ],
+        }],
  "tilewidth":32,
  "type":"map",
  "version":"1.9",
