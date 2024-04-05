@@ -33,7 +33,7 @@
   <image source="tilesets/offgrid under wall.png" width="1472" height="2176"/>
  </tileset>
  <tileset firstgid="22513" name="WA_Special_Zones" tilewidth="32" tileheight="32" tilecount="12" columns="6">
-  <image source="D:/Bilder/gather/assets/Tilesets/ship and steampunk/v4/Modern 3 Level Ship/WA_Special_Zones.png" width="192" height="64"/>
+  <image source="tilesets/WA_Special_Zones.png" width="192" height="64"/>
   <tile id="0">
    <properties>
     <property name="start" value="cowork"/>
@@ -44,6 +44,19 @@
     <property name="startLayer" type="bool" value="true"/>
    </properties>
   </tile>
+  <tile id="2">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="exitUrl" value="tba"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="22525" name="WA_Special_Zones" tilewidth="32" tileheight="32" tilecount="12" columns="6">
+  <image source="tilesets/WA_Special_Zones.png" width="192" height="64"/>
   <tile id="2">
    <properties>
     <property name="collides" type="bool" value="true"/>
