@@ -32,19 +32,6 @@
  <tileset firstgid="19385" name="offgrid under wall" tilewidth="32" tileheight="32" tilecount="3128" columns="46">
   <image source="tilesets/offgrid under wall.png" width="1472" height="2176"/>
  </tileset>
- <tileset firstgid="22513" name="WA_Special_Zones" tilewidth="32" tileheight="32" tilecount="12" columns="6">
-  <image source="tilesets/Zones.png" width="192" height="64"/>
-  <tile id="2">
-   <properties>
-    <property name="collides" type="bool" value="true"/>
-   </properties>
-  </tile>
-  <tile id="5">
-   <properties>
-    <property name="exitUrl" value="tba"/>
-   </properties>
-  </tile>
- </tileset>
  <group id="41" name="BG Interior">
   <layer id="10" name="Green" width="46" height="68">
    <data encoding="csv">
