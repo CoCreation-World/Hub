@@ -3468,7 +3468,7 @@
                          "visible":true,
                          "width":32,
                          "x":890,
-                         "y":1463.66666666667
+                         "y":1463.67
                         }, 
                         {
                          "class":"",
@@ -5804,7 +5804,7 @@
                  "y":0
                 }],
          "name":"FG Exterior",
-         "opacity":0,
+         "opacity":1,
          "type":"group",
          "visible":false,
          "x":0,
