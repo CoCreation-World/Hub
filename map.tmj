@@ -4546,6 +4546,11 @@
          "name":"mapName",
          "type":"string",
          "value":"CoCreation.World"
+        }, 
+        {
+         "name":"script",
+         "type":"string",
+         "value":"script.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.2",
