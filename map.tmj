@@ -877,7 +877,7 @@
                 {
                  "draworder":"topdown",
                  "id":54,
-                 "name":"Off-grid Under Wall",
+                 "name":"[Off-grid] Under Wall",
                  "objects":[
                         {
                          "class":"",
@@ -1214,28 +1214,6 @@
                          "width":32,
                          "x":737,
                          "y":598.5
-                        }, 
-                        {
-                         "class":"",
-                         "height":0,
-                         "id":293,
-                         "name":"",
-                         "rotation":0,
-                         "visible":true,
-                         "width":0,
-                         "x":857.575757575758,
-                         "y":1275.75757575758
-                        }, 
-                        {
-                         "class":"",
-                         "height":0,
-                         "id":294,
-                         "name":"",
-                         "rotation":0,
-                         "visible":true,
-                         "width":0,
-                         "x":869.69696969697,
-                         "y":1275.75757575758
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -2036,7 +2014,7 @@
                 {
                  "draworder":"topdown",
                  "id":52,
-                 "name":"Off-grid Object",
+                 "name":"[Off-grid] Object",
                  "objects":[
                         {
                          "class":"",
@@ -3490,7 +3468,7 @@
                          "visible":true,
                          "width":32,
                          "x":890,
-                         "y":1463.66666666667
+                         "y":1463.67
                         }, 
                         {
                          "class":"",
@@ -3790,8 +3768,8 @@
                          "rotation":0,
                          "visible":true,
                          "width":32,
-                         "x":853.030636363636,
-                         "y":1147.51181818182
+                         "x":852.667,
+                         "y":1147.33
                         }, 
                         {
                          "class":"",
@@ -3948,17 +3926,6 @@
                          "width":32,
                          "x":801.75,
                          "y":205.75
-                        }, 
-                        {
-                         "class":"",
-                         "height":1124.24242424242,
-                         "id":292,
-                         "name":"",
-                         "rotation":0,
-                         "visible":true,
-                         "width":2033.33333333333,
-                         "x":-209.090909090909,
-                         "y":1151.51515151515
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -4206,7 +4173,7 @@
                 {
                  "draworder":"topdown",
                  "id":49,
-                 "name":"Off-grid Plant",
+                 "name":"[Off-grid] Plant",
                  "objects":[
                         {
                          "class":"",
@@ -5837,14 +5804,14 @@
                  "y":0
                 }],
          "name":"FG Exterior",
-         "opacity":0,
+         "opacity":1,
          "type":"group",
          "visible":false,
          "x":0,
          "y":0
         }],
  "nextlayerid":68,
- "nextobjectid":295,
+ "nextobjectid":292,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",
@@ -5897,8 +5864,362 @@
          "tilewidth":32
         }, 
         {
+         "columns":0,
          "firstgid":10001,
-         "source":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Off-grid Objects.tsx"
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"Off-grid Objects",
+         "spacing":0,
+         "tilecount":27,
+         "tileheight":128,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-1.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":1,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-2.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":2,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-3.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":3,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-1-FG.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":4,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-2-FG.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":5,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-3-FG.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":6,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Chair-white-E.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":7,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Chair-white-N.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":8,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Chair-white-S.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":9,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Chair-white-W.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":10,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-black-E.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":11,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-black-N.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":12,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-black-S.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":13,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-black-W.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":14,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-green-E.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":15,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-green-N.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":16,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-green-S.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":17,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-green-W.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":18,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-white-E.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":19,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-white-N.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":20,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-white-S.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":21,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-white-W.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":22,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Plant-1.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":23,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Plant-2.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":24,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Plant-3.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":25,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Bench-white-E.png",
+                 "imageheight":96,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":26,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Bench-white-W.png",
+                 "imageheight":96,
+                 "imagewidth":32
+                }],
+         "tilewidth":96
+        }, 
+        {
+         "columns":0,
+         "firstgid":10028,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"Off-grid Objects",
+         "spacing":0,
+         "tilecount":27,
+         "tileheight":128,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-1.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":1,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-2.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":2,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-3.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":3,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-1-FG.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":4,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-2-FG.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":5,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Tree-3-FG.png",
+                 "imageheight":128,
+                 "imagewidth":96
+                }, 
+                {
+                 "id":6,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Chair-white-E.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":7,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Chair-white-N.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":8,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Chair-white-S.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":9,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Chair-white-W.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":10,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-black-E.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":11,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-black-N.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":12,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-black-S.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":13,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-black-W.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":14,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-green-E.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":15,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-green-N.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":16,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-green-S.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":17,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-green-W.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":18,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-white-E.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":19,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-white-N.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":20,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-white-S.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":21,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Sofa-white-W.png",
+                 "imageheight":32,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":22,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Plant-1.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":23,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Plant-2.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":24,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Plant-3.png",
+                 "imageheight":64,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":25,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Bench-white-E.png",
+                 "imageheight":96,
+                 "imagewidth":32
+                }, 
+                {
+                 "id":26,
+                 "image":"D:\/Bilder\/gather\/CoWork\/7_CWT Remastered 2 Project\/Single Object\/Bench-white-W.png",
+                 "imageheight":96,
+                 "imagewidth":32
+                }],
+         "tilewidth":96
         }],
  "tilewidth":32,
  "type":"map",
