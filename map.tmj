@@ -162,6 +162,11 @@
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"Central"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"admin"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -4478,11 +4483,6 @@
          "name":"mapName",
          "type":"string",
          "value":"CoCreation.World"
-        }, 
-        {
-         "name":"script",
-         "type":"string",
-         "value":"script.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

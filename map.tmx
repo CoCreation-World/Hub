@@ -5,7 +5,6 @@
   <property name="mapDescription" value="The Metaverse of the worlds first international Metaverse for professionals."/>
   <property name="mapLink" value="CoCreation.World"/>
   <property name="mapName" value="CoCreation.World"/>
-  <property name="script" value="script.js"/>
  </properties>
  <tileset firstgid="1" name="CWT v2 Tileset" tilewidth="32" tileheight="32" tilecount="10000" columns="100">
   <properties>
@@ -132,6 +131,7 @@
   <layer id="76" name="CenterMeeting" width="46" height="68">
    <properties>
     <property name="jitsiRoom" value="Central"/>
+    <property name="jitsiRoomAdminTag" value="admin"/>
    </properties>
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
