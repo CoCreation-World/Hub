@@ -4661,54 +4661,8 @@
          "tilewidth":32
         }, 
         {
-         "columns":6,
          "firstgid":22513,
-         "image":"D:\/Bilder\/gather\/assets\/Tilesets\/ship and steampunk\/v4\/Modern 3 Level Ship\/WA_Special_Zones.png",
-         "imageheight":64,
-         "imagewidth":192,
-         "margin":0,
-         "name":"WA_Special_Zones",
-         "spacing":0,
-         "tilecount":12,
-         "tileheight":32,
-         "tiles":[
-                {
-                 "id":0,
-                 "properties":[
-                        {
-                         "name":"start",
-                         "type":"string",
-                         "value":"cowork"
-                        }]
-                }, 
-                {
-                 "id":1,
-                 "properties":[
-                        {
-                         "name":"startLayer",
-                         "type":"bool",
-                         "value":true
-                        }]
-                }, 
-                {
-                 "id":2,
-                 "properties":[
-                        {
-                         "name":"collides",
-                         "type":"bool",
-                         "value":true
-                        }]
-                }, 
-                {
-                 "id":5,
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":"tba"
-                        }]
-                }],
-         "tilewidth":32
+         "source":"tilesets\/WA_Special_Zones.tsx"
         }],
  "tilewidth":32,
  "type":"map",
