@@ -191,7 +191,7 @@
  <tileset firstgid="19439" name="offgrid under wall" tilewidth="32" tileheight="32" tilecount="3128" columns="46">
   <image source="tilesets/offgrid under wall.png" width="1472" height="2176"/>
  </tileset>
- <tileset firstgid="22567" name="Off-grid Objects" tilewidth="96" tileheight="128" tilecount="27" columns="0">
+ <tileset firstgid="22567" name="Off-grid Objects" tilewidth="1620" tileheight="1928" tilecount="27" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image source="tilesets/Single Object/Tree-1.png"/>
@@ -272,7 +272,7 @@
    <image source="tilesets/Single Object/Bench-white-E.png"/>
   </tile>
   <tile id="26">
-   <image source="tilesets/Single Object/Bench-white-W.png"/>
+   <image width="1620" height="1928" source="D:/Bilder/gather/assets/Tilesets/Art-Repository-main/Tiled Projects/Innovation Divan/map.png"/>
   </tile>
  </tileset>
  <tileset firstgid="22594" name="Off-grid Objects" tilewidth="96" tileheight="128" tilecount="27" columns="0">
