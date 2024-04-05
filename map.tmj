@@ -116252,7 +116252,7 @@
     },
     {
       "name": "FG Exterior",
-      "opacity": 1,
+      "opacity": 0,
       "type": "group",
       "layers": [
         {
@@ -128820,7 +128820,7 @@
           "y": 0
         }
       ],
-      "visible": false,
+      "visible": true,
       "id": 46,
       "x": 0,
       "y": 0
@@ -128831,7 +128831,7 @@
     {
       "columns": 16,
       "firstgid": 1,
-      "image": "map-chunk-1-1eb6ae84.png",
+      "image": "map-chunk-1-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -128871,7 +128871,7 @@
     {
       "columns": 16,
       "firstgid": 257,
-      "image": "map-chunk-2-1eb6ae84.png",
+      "image": "map-chunk-2-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -128886,7 +128886,7 @@
     {
       "columns": 16,
       "firstgid": 513,
-      "image": "map-chunk-3-1eb6ae84.png",
+      "image": "map-chunk-3-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -128901,7 +128901,7 @@
     {
       "columns": 16,
       "firstgid": 769,
-      "image": "map-chunk-4-1eb6ae84.png",
+      "image": "map-chunk-4-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -128916,7 +128916,7 @@
     {
       "columns": 16,
       "firstgid": 1025,
-      "image": "map-chunk-5-1eb6ae84.png",
+      "image": "map-chunk-5-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -128931,7 +128931,7 @@
     {
       "columns": 16,
       "firstgid": 1281,
-      "image": "map-chunk-6-1eb6ae84.png",
+      "image": "map-chunk-6-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -128946,7 +128946,7 @@
     {
       "columns": 16,
       "firstgid": 1537,
-      "image": "map-chunk-7-1eb6ae84.png",
+      "image": "map-chunk-7-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -128961,7 +128961,7 @@
     {
       "columns": 16,
       "firstgid": 1793,
-      "image": "map-chunk-8-1eb6ae84.png",
+      "image": "map-chunk-8-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -128976,7 +128976,7 @@
     {
       "columns": 16,
       "firstgid": 2049,
-      "image": "map-chunk-9-1eb6ae84.png",
+      "image": "map-chunk-9-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -128991,7 +128991,7 @@
     {
       "columns": 16,
       "firstgid": 2305,
-      "image": "map-chunk-10-1eb6ae84.png",
+      "image": "map-chunk-10-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129006,7 +129006,7 @@
     {
       "columns": 16,
       "firstgid": 2561,
-      "image": "map-chunk-11-1eb6ae84.png",
+      "image": "map-chunk-11-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129021,7 +129021,7 @@
     {
       "columns": 16,
       "firstgid": 2817,
-      "image": "map-chunk-12-1eb6ae84.png",
+      "image": "map-chunk-12-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129036,7 +129036,7 @@
     {
       "columns": 16,
       "firstgid": 3073,
-      "image": "map-chunk-13-1eb6ae84.png",
+      "image": "map-chunk-13-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129051,7 +129051,7 @@
     {
       "columns": 16,
       "firstgid": 3329,
-      "image": "map-chunk-14-1eb6ae84.png",
+      "image": "map-chunk-14-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129066,7 +129066,7 @@
     {
       "columns": 16,
       "firstgid": 3585,
-      "image": "map-chunk-15-1eb6ae84.png",
+      "image": "map-chunk-15-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129081,7 +129081,7 @@
     {
       "columns": 16,
       "firstgid": 3841,
-      "image": "map-chunk-16-1eb6ae84.png",
+      "image": "map-chunk-16-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129096,7 +129096,7 @@
     {
       "columns": 16,
       "firstgid": 4097,
-      "image": "map-chunk-17-1eb6ae84.png",
+      "image": "map-chunk-17-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129111,7 +129111,7 @@
     {
       "columns": 16,
       "firstgid": 4353,
-      "image": "map-chunk-18-1eb6ae84.png",
+      "image": "map-chunk-18-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129126,7 +129126,7 @@
     {
       "columns": 16,
       "firstgid": 4609,
-      "image": "map-chunk-19-1eb6ae84.png",
+      "image": "map-chunk-19-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129141,7 +129141,7 @@
     {
       "columns": 16,
       "firstgid": 4865,
-      "image": "map-chunk-20-1eb6ae84.png",
+      "image": "map-chunk-20-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129156,7 +129156,7 @@
     {
       "columns": 16,
       "firstgid": 5121,
-      "image": "map-chunk-21-1eb6ae84.png",
+      "image": "map-chunk-21-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129171,7 +129171,7 @@
     {
       "columns": 16,
       "firstgid": 5377,
-      "image": "map-chunk-22-1eb6ae84.png",
+      "image": "map-chunk-22-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129186,7 +129186,7 @@
     {
       "columns": 16,
       "firstgid": 5633,
-      "image": "map-chunk-23-1eb6ae84.png",
+      "image": "map-chunk-23-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129201,7 +129201,7 @@
     {
       "columns": 16,
       "firstgid": 5889,
-      "image": "map-chunk-24-1eb6ae84.png",
+      "image": "map-chunk-24-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129216,7 +129216,7 @@
     {
       "columns": 16,
       "firstgid": 6145,
-      "image": "map-chunk-25-1eb6ae84.png",
+      "image": "map-chunk-25-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129231,7 +129231,7 @@
     {
       "columns": 16,
       "firstgid": 6401,
-      "image": "map-chunk-26-1eb6ae84.png",
+      "image": "map-chunk-26-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129246,7 +129246,7 @@
     {
       "columns": 16,
       "firstgid": 6657,
-      "image": "map-chunk-27-1eb6ae84.png",
+      "image": "map-chunk-27-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129261,7 +129261,7 @@
     {
       "columns": 16,
       "firstgid": 6913,
-      "image": "map-chunk-28-1eb6ae84.png",
+      "image": "map-chunk-28-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129276,7 +129276,7 @@
     {
       "columns": 16,
       "firstgid": 7169,
-      "image": "map-chunk-29-1eb6ae84.png",
+      "image": "map-chunk-29-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129291,7 +129291,7 @@
     {
       "columns": 16,
       "firstgid": 7425,
-      "image": "map-chunk-30-1eb6ae84.png",
+      "image": "map-chunk-30-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129306,7 +129306,7 @@
     {
       "columns": 16,
       "firstgid": 7681,
-      "image": "map-chunk-31-1eb6ae84.png",
+      "image": "map-chunk-31-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129321,7 +129321,7 @@
     {
       "columns": 16,
       "firstgid": 7937,
-      "image": "map-chunk-32-1eb6ae84.png",
+      "image": "map-chunk-32-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129336,7 +129336,7 @@
     {
       "columns": 16,
       "firstgid": 8193,
-      "image": "map-chunk-33-1eb6ae84.png",
+      "image": "map-chunk-33-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129351,7 +129351,7 @@
     {
       "columns": 16,
       "firstgid": 8449,
-      "image": "map-chunk-34-1eb6ae84.png",
+      "image": "map-chunk-34-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129366,7 +129366,7 @@
     {
       "columns": 16,
       "firstgid": 8705,
-      "image": "map-chunk-35-1eb6ae84.png",
+      "image": "map-chunk-35-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129381,7 +129381,7 @@
     {
       "columns": 16,
       "firstgid": 8961,
-      "image": "map-chunk-36-1eb6ae84.png",
+      "image": "map-chunk-36-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129396,7 +129396,7 @@
     {
       "columns": 16,
       "firstgid": 9217,
-      "image": "map-chunk-37-1eb6ae84.png",
+      "image": "map-chunk-37-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129411,7 +129411,7 @@
     {
       "columns": 16,
       "firstgid": 9473,
-      "image": "map-chunk-38-1eb6ae84.png",
+      "image": "map-chunk-38-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129426,7 +129426,7 @@
     {
       "columns": 16,
       "firstgid": 9729,
-      "image": "map-chunk-39-1eb6ae84.png",
+      "image": "map-chunk-39-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129441,7 +129441,7 @@
     {
       "columns": 16,
       "firstgid": 9985,
-      "image": "map-chunk-40-1eb6ae84.png",
+      "image": "map-chunk-40-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129456,7 +129456,7 @@
     {
       "columns": 16,
       "firstgid": 10241,
-      "image": "map-chunk-41-1eb6ae84.png",
+      "image": "map-chunk-41-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129471,7 +129471,7 @@
     {
       "columns": 16,
       "firstgid": 10497,
-      "image": "map-chunk-42-1eb6ae84.png",
+      "image": "map-chunk-42-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129486,7 +129486,7 @@
     {
       "columns": 16,
       "firstgid": 10753,
-      "image": "map-chunk-43-1eb6ae84.png",
+      "image": "map-chunk-43-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129501,7 +129501,7 @@
     {
       "columns": 16,
       "firstgid": 11009,
-      "image": "map-chunk-44-1eb6ae84.png",
+      "image": "map-chunk-44-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129516,7 +129516,7 @@
     {
       "columns": 16,
       "firstgid": 11265,
-      "image": "map-chunk-45-1eb6ae84.png",
+      "image": "map-chunk-45-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129531,7 +129531,7 @@
     {
       "columns": 16,
       "firstgid": 11521,
-      "image": "map-chunk-46-1eb6ae84.png",
+      "image": "map-chunk-46-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129546,7 +129546,7 @@
     {
       "columns": 16,
       "firstgid": 11777,
-      "image": "map-chunk-47-1eb6ae84.png",
+      "image": "map-chunk-47-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129561,7 +129561,7 @@
     {
       "columns": 16,
       "firstgid": 12033,
-      "image": "map-chunk-48-1eb6ae84.png",
+      "image": "map-chunk-48-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129576,7 +129576,7 @@
     {
       "columns": 16,
       "firstgid": 12289,
-      "image": "map-chunk-49-1eb6ae84.png",
+      "image": "map-chunk-49-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129591,7 +129591,7 @@
     {
       "columns": 16,
       "firstgid": 12545,
-      "image": "map-chunk-50-1eb6ae84.png",
+      "image": "map-chunk-50-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129606,7 +129606,7 @@
     {
       "columns": 16,
       "firstgid": 12801,
-      "image": "map-chunk-51-1eb6ae84.png",
+      "image": "map-chunk-51-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129621,7 +129621,7 @@
     {
       "columns": 16,
       "firstgid": 13057,
-      "image": "map-chunk-52-1eb6ae84.png",
+      "image": "map-chunk-52-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129636,7 +129636,7 @@
     {
       "columns": 16,
       "firstgid": 13313,
-      "image": "map-chunk-53-1eb6ae84.png",
+      "image": "map-chunk-53-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129651,7 +129651,7 @@
     {
       "columns": 16,
       "firstgid": 13569,
-      "image": "map-chunk-54-1eb6ae84.png",
+      "image": "map-chunk-54-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129666,7 +129666,7 @@
     {
       "columns": 16,
       "firstgid": 13825,
-      "image": "map-chunk-55-1eb6ae84.png",
+      "image": "map-chunk-55-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129681,7 +129681,7 @@
     {
       "columns": 16,
       "firstgid": 14081,
-      "image": "map-chunk-56-1eb6ae84.png",
+      "image": "map-chunk-56-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129696,7 +129696,7 @@
     {
       "columns": 16,
       "firstgid": 14337,
-      "image": "map-chunk-57-1eb6ae84.png",
+      "image": "map-chunk-57-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129711,7 +129711,7 @@
     {
       "columns": 16,
       "firstgid": 14593,
-      "image": "map-chunk-58-1eb6ae84.png",
+      "image": "map-chunk-58-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129726,7 +129726,7 @@
     {
       "columns": 16,
       "firstgid": 14849,
-      "image": "map-chunk-59-1eb6ae84.png",
+      "image": "map-chunk-59-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129741,7 +129741,7 @@
     {
       "columns": 16,
       "firstgid": 15105,
-      "image": "map-chunk-60-1eb6ae84.png",
+      "image": "map-chunk-60-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129756,7 +129756,7 @@
     {
       "columns": 16,
       "firstgid": 15361,
-      "image": "map-chunk-61-1eb6ae84.png",
+      "image": "map-chunk-61-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129771,7 +129771,7 @@
     {
       "columns": 16,
       "firstgid": 15617,
-      "image": "map-chunk-62-1eb6ae84.png",
+      "image": "map-chunk-62-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129786,7 +129786,7 @@
     {
       "columns": 16,
       "firstgid": 15873,
-      "image": "map-chunk-63-1eb6ae84.png",
+      "image": "map-chunk-63-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129801,7 +129801,7 @@
     {
       "columns": 16,
       "firstgid": 16129,
-      "image": "map-chunk-64-1eb6ae84.png",
+      "image": "map-chunk-64-e2a48b13.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -129816,7 +129816,7 @@
     {
       "columns": 9,
       "firstgid": 16385,
-      "image": "map-chunk-65-1eb6ae84.png",
+      "image": "map-chunk-65-e2a48b13.png",
       "imageheight": 288,
       "imagewidth": 288,
       "margin": 0,
