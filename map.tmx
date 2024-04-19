@@ -159,7 +159,7 @@
    <objectgroup id="91" name="Cuckoo1">
     <object id="309" name="cuckoo1" class="website" x="1024" y="736" width="97.3333" height="96.6667">
      <properties>
-      <property name="allowApi" type="bool" value="true"/>
+      <property name="allowApi" type="bool" value="false"/>
       <property name="url" value="https://cuckoo.team/ccw-cuckoo1"/>
      </properties>
     </object>
