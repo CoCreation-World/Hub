@@ -94284,6 +94284,30 @@
           "offsety": -2,
           "x": 0,
           "y": 0
+        },
+        {
+          "name": "cuckootest",
+          "objects": [
+            {
+              "id": 310,
+              "name": "",
+              "visible": true,
+              "x": 1135.33333333333,
+              "y": 416.666666666667,
+              "gid": 22549,
+              "height": 32,
+              "rotation": 0,
+              "class": "",
+              "width": 32
+            }
+          ],
+          "opacity": 1,
+          "type": "objectgroup",
+          "visible": true,
+          "draworder": "topdown",
+          "id": 92,
+          "x": 0,
+          "y": 0
         }
       ],
       "visible": true,
@@ -138304,7 +138328,7 @@
     {
       "columns": 16,
       "firstgid": 1,
-      "image": "map-chunk-1-db70ee66.png",
+      "image": "map-chunk-1-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -140810,7 +140834,7 @@
     {
       "columns": 16,
       "firstgid": 257,
-      "image": "map-chunk-2-db70ee66.png",
+      "image": "map-chunk-2-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -143386,7 +143410,7 @@
     {
       "columns": 16,
       "firstgid": 513,
-      "image": "map-chunk-3-db70ee66.png",
+      "image": "map-chunk-3-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144232,7 +144256,7 @@
     {
       "columns": 16,
       "firstgid": 769,
-      "image": "map-chunk-4-db70ee66.png",
+      "image": "map-chunk-4-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144247,7 +144271,7 @@
     {
       "columns": 16,
       "firstgid": 1025,
-      "image": "map-chunk-5-db70ee66.png",
+      "image": "map-chunk-5-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144262,7 +144286,7 @@
     {
       "columns": 16,
       "firstgid": 1281,
-      "image": "map-chunk-6-db70ee66.png",
+      "image": "map-chunk-6-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144277,7 +144301,7 @@
     {
       "columns": 16,
       "firstgid": 1537,
-      "image": "map-chunk-7-db70ee66.png",
+      "image": "map-chunk-7-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144292,7 +144316,7 @@
     {
       "columns": 16,
       "firstgid": 1793,
-      "image": "map-chunk-8-db70ee66.png",
+      "image": "map-chunk-8-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144307,7 +144331,7 @@
     {
       "columns": 16,
       "firstgid": 2049,
-      "image": "map-chunk-9-db70ee66.png",
+      "image": "map-chunk-9-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144322,7 +144346,7 @@
     {
       "columns": 16,
       "firstgid": 2305,
-      "image": "map-chunk-10-db70ee66.png",
+      "image": "map-chunk-10-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144337,7 +144361,7 @@
     {
       "columns": 16,
       "firstgid": 2561,
-      "image": "map-chunk-11-db70ee66.png",
+      "image": "map-chunk-11-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144352,7 +144376,7 @@
     {
       "columns": 16,
       "firstgid": 2817,
-      "image": "map-chunk-12-db70ee66.png",
+      "image": "map-chunk-12-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144367,7 +144391,7 @@
     {
       "columns": 16,
       "firstgid": 3073,
-      "image": "map-chunk-13-db70ee66.png",
+      "image": "map-chunk-13-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144382,7 +144406,7 @@
     {
       "columns": 16,
       "firstgid": 3329,
-      "image": "map-chunk-14-db70ee66.png",
+      "image": "map-chunk-14-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -144588,7 +144612,7 @@
     {
       "columns": 16,
       "firstgid": 3585,
-      "image": "map-chunk-15-db70ee66.png",
+      "image": "map-chunk-15-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -147164,7 +147188,7 @@
     {
       "columns": 16,
       "firstgid": 3841,
-      "image": "map-chunk-16-db70ee66.png",
+      "image": "map-chunk-16-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148140,7 +148164,7 @@
     {
       "columns": 16,
       "firstgid": 4097,
-      "image": "map-chunk-17-db70ee66.png",
+      "image": "map-chunk-17-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148155,7 +148179,7 @@
     {
       "columns": 16,
       "firstgid": 4353,
-      "image": "map-chunk-18-db70ee66.png",
+      "image": "map-chunk-18-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148170,7 +148194,7 @@
     {
       "columns": 16,
       "firstgid": 4609,
-      "image": "map-chunk-19-db70ee66.png",
+      "image": "map-chunk-19-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148185,7 +148209,7 @@
     {
       "columns": 16,
       "firstgid": 4865,
-      "image": "map-chunk-20-db70ee66.png",
+      "image": "map-chunk-20-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148200,7 +148224,7 @@
     {
       "columns": 16,
       "firstgid": 5121,
-      "image": "map-chunk-21-db70ee66.png",
+      "image": "map-chunk-21-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148215,7 +148239,7 @@
     {
       "columns": 16,
       "firstgid": 5377,
-      "image": "map-chunk-22-db70ee66.png",
+      "image": "map-chunk-22-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148230,7 +148254,7 @@
     {
       "columns": 16,
       "firstgid": 5633,
-      "image": "map-chunk-23-db70ee66.png",
+      "image": "map-chunk-23-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148245,7 +148269,7 @@
     {
       "columns": 16,
       "firstgid": 5889,
-      "image": "map-chunk-24-db70ee66.png",
+      "image": "map-chunk-24-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148260,7 +148284,7 @@
     {
       "columns": 16,
       "firstgid": 6145,
-      "image": "map-chunk-25-db70ee66.png",
+      "image": "map-chunk-25-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148275,7 +148299,7 @@
     {
       "columns": 16,
       "firstgid": 6401,
-      "image": "map-chunk-26-db70ee66.png",
+      "image": "map-chunk-26-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -148491,7 +148515,7 @@
     {
       "columns": 16,
       "firstgid": 6657,
-      "image": "map-chunk-27-db70ee66.png",
+      "image": "map-chunk-27-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149227,7 +149251,7 @@
     {
       "columns": 16,
       "firstgid": 6913,
-      "image": "map-chunk-28-db70ee66.png",
+      "image": "map-chunk-28-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149242,7 +149266,7 @@
     {
       "columns": 16,
       "firstgid": 7169,
-      "image": "map-chunk-29-db70ee66.png",
+      "image": "map-chunk-29-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149257,7 +149281,7 @@
     {
       "columns": 16,
       "firstgid": 7425,
-      "image": "map-chunk-30-db70ee66.png",
+      "image": "map-chunk-30-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149272,7 +149296,7 @@
     {
       "columns": 16,
       "firstgid": 7681,
-      "image": "map-chunk-31-db70ee66.png",
+      "image": "map-chunk-31-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149287,7 +149311,7 @@
     {
       "columns": 16,
       "firstgid": 7937,
-      "image": "map-chunk-32-db70ee66.png",
+      "image": "map-chunk-32-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149302,7 +149326,7 @@
     {
       "columns": 16,
       "firstgid": 8193,
-      "image": "map-chunk-33-db70ee66.png",
+      "image": "map-chunk-33-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149317,7 +149341,7 @@
     {
       "columns": 16,
       "firstgid": 8449,
-      "image": "map-chunk-34-db70ee66.png",
+      "image": "map-chunk-34-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149332,7 +149356,7 @@
     {
       "columns": 16,
       "firstgid": 8705,
-      "image": "map-chunk-35-db70ee66.png",
+      "image": "map-chunk-35-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149347,7 +149371,7 @@
     {
       "columns": 16,
       "firstgid": 8961,
-      "image": "map-chunk-36-db70ee66.png",
+      "image": "map-chunk-36-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149362,7 +149386,7 @@
     {
       "columns": 16,
       "firstgid": 9217,
-      "image": "map-chunk-37-db70ee66.png",
+      "image": "map-chunk-37-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149377,7 +149401,7 @@
     {
       "columns": 16,
       "firstgid": 9473,
-      "image": "map-chunk-38-db70ee66.png",
+      "image": "map-chunk-38-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -149392,7 +149416,7 @@
     {
       "columns": 16,
       "firstgid": 9729,
-      "image": "map-chunk-39-db70ee66.png",
+      "image": "map-chunk-39-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150150,7 +150174,7 @@
     {
       "columns": 16,
       "firstgid": 9985,
-      "image": "map-chunk-40-db70ee66.png",
+      "image": "map-chunk-40-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150165,7 +150189,7 @@
     {
       "columns": 16,
       "firstgid": 10241,
-      "image": "map-chunk-41-db70ee66.png",
+      "image": "map-chunk-41-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150180,7 +150204,7 @@
     {
       "columns": 16,
       "firstgid": 10497,
-      "image": "map-chunk-42-db70ee66.png",
+      "image": "map-chunk-42-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150195,7 +150219,7 @@
     {
       "columns": 16,
       "firstgid": 10753,
-      "image": "map-chunk-43-db70ee66.png",
+      "image": "map-chunk-43-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150210,7 +150234,7 @@
     {
       "columns": 16,
       "firstgid": 11009,
-      "image": "map-chunk-44-db70ee66.png",
+      "image": "map-chunk-44-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150225,7 +150249,7 @@
     {
       "columns": 16,
       "firstgid": 11265,
-      "image": "map-chunk-45-db70ee66.png",
+      "image": "map-chunk-45-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150240,7 +150264,7 @@
     {
       "columns": 16,
       "firstgid": 11521,
-      "image": "map-chunk-46-db70ee66.png",
+      "image": "map-chunk-46-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150255,7 +150279,7 @@
     {
       "columns": 16,
       "firstgid": 11777,
-      "image": "map-chunk-47-db70ee66.png",
+      "image": "map-chunk-47-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150270,7 +150294,7 @@
     {
       "columns": 16,
       "firstgid": 12033,
-      "image": "map-chunk-48-db70ee66.png",
+      "image": "map-chunk-48-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150285,7 +150309,7 @@
     {
       "columns": 16,
       "firstgid": 12289,
-      "image": "map-chunk-49-db70ee66.png",
+      "image": "map-chunk-49-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150300,7 +150324,7 @@
     {
       "columns": 16,
       "firstgid": 12545,
-      "image": "map-chunk-50-db70ee66.png",
+      "image": "map-chunk-50-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150315,7 +150339,7 @@
     {
       "columns": 16,
       "firstgid": 12801,
-      "image": "map-chunk-51-db70ee66.png",
+      "image": "map-chunk-51-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -150330,7 +150354,7 @@
     {
       "columns": 16,
       "firstgid": 13057,
-      "image": "map-chunk-52-db70ee66.png",
+      "image": "map-chunk-52-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -152706,7 +152730,7 @@
     {
       "columns": 16,
       "firstgid": 13313,
-      "image": "map-chunk-53-db70ee66.png",
+      "image": "map-chunk-53-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -155282,7 +155306,7 @@
     {
       "columns": 16,
       "firstgid": 13569,
-      "image": "map-chunk-54-db70ee66.png",
+      "image": "map-chunk-54-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -157858,7 +157882,7 @@
     {
       "columns": 16,
       "firstgid": 13825,
-      "image": "map-chunk-55-db70ee66.png",
+      "image": "map-chunk-55-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -160434,7 +160458,7 @@
     {
       "columns": 16,
       "firstgid": 14081,
-      "image": "map-chunk-56-db70ee66.png",
+      "image": "map-chunk-56-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -163010,7 +163034,7 @@
     {
       "columns": 16,
       "firstgid": 14337,
-      "image": "map-chunk-57-db70ee66.png",
+      "image": "map-chunk-57-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -165586,7 +165610,7 @@
     {
       "columns": 16,
       "firstgid": 14593,
-      "image": "map-chunk-58-db70ee66.png",
+      "image": "map-chunk-58-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -168162,7 +168186,7 @@
     {
       "columns": 16,
       "firstgid": 14849,
-      "image": "map-chunk-59-db70ee66.png",
+      "image": "map-chunk-59-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -170738,7 +170762,7 @@
     {
       "columns": 16,
       "firstgid": 15105,
-      "image": "map-chunk-60-db70ee66.png",
+      "image": "map-chunk-60-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -173314,7 +173338,7 @@
     {
       "columns": 16,
       "firstgid": 15361,
-      "image": "map-chunk-61-db70ee66.png",
+      "image": "map-chunk-61-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -175890,7 +175914,7 @@
     {
       "columns": 16,
       "firstgid": 15617,
-      "image": "map-chunk-62-db70ee66.png",
+      "image": "map-chunk-62-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -178466,7 +178490,7 @@
     {
       "columns": 16,
       "firstgid": 15873,
-      "image": "map-chunk-63-db70ee66.png",
+      "image": "map-chunk-63-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -181042,7 +181066,7 @@
     {
       "columns": 16,
       "firstgid": 16129,
-      "image": "map-chunk-64-db70ee66.png",
+      "image": "map-chunk-64-93dad95e.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
@@ -183618,7 +183642,7 @@
     {
       "columns": 11,
       "firstgid": 16385,
-      "image": "map-chunk-65-db70ee66.png",
+      "image": "map-chunk-65-93dad95e.png",
       "imageheight": 352,
       "imagewidth": 352,
       "margin": 0,
@@ -184746,8 +184770,8 @@
   "compressionlevel": -1,
   "height": 68,
   "infinite": false,
-  "nextlayerid": 92,
-  "nextobjectid": 310,
+  "nextlayerid": 93,
+  "nextobjectid": 311,
   "orientation": "orthogonal",
   "properties": [
     {
