@@ -2421,6 +2421,29 @@
                  "width":46,
                  "x":0,
                  "y":0
+                }, 
+                {
+                 "draworder":"topdown",
+                 "id":92,
+                 "name":"cuckootest",
+                 "objects":[
+                        {
+                         "class":"",
+                         "gid":22549,
+                         "height":32,
+                         "id":310,
+                         "name":"",
+                         "rotation":0,
+                         "visible":true,
+                         "width":32,
+                         "x":1135.33333333333,
+                         "y":416.666666666667
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
                 }],
          "name":"BG Interior",
          "opacity":1,
@@ -3567,8 +3590,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":92,
- "nextobjectid":310,
+ "nextlayerid":93,
+ "nextobjectid":311,
  "orientation":"orthogonal",
  "properties":[
         {
