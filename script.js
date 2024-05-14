@@ -1,9 +1,10 @@
 WA.room.area.onEnter('showRoof').subscribe(() => {
     WA.room.showLayer('FG Exterior/Roof');
-    WA.room.hideLayer('FG Exterior/RoofOpacity');
+    WA.room.showLayer('FG Exterior/RoofOpacity');
 });
 WA.room.area.onLeave('showRoof').subscribe(() => {
     WA.room.hideLayer('FG Exterior/Roof');
+    WA.room.hideLayer('FG Exterior/RoofOpacity');
 });
 WA.room.area.onEnter('topRight').subscribe(() => {
     WA.room.showLayer('FG Exterior/RoofOpacity');
