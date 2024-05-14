@@ -3399,7 +3399,7 @@
                  "name":"Roof",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":true,
+                 "visible":false,
                  "width":46,
                  "x":0,
                  "y":0
@@ -3414,7 +3414,7 @@
                          "class":"area",
                          "height":788,
                          "id":316,
-                         "name":"hideRoof",
+                         "name":"showRoof",
                          "rotation":0,
                          "visible":true,
                          "width":652,
@@ -3536,6 +3536,11 @@
          "name":"mapName",
          "type":"string",
          "value":"CoCreation.World"
+        }, 
+        {
+         "name":"script",
+         "type":"string",
+         "value":"script.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.2",
