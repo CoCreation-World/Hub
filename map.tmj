@@ -3399,7 +3399,7 @@
                  "name":"Roof",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":46,
                  "x":0,
                  "y":0
