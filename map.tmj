@@ -2793,17 +2793,6 @@
          "name":"floorLayer",
          "objects":[],
          "opacity":1,
-         "properties":[
-                {
-                 "name":"autoClose",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"doorVariable",
-                 "type":"string",
-                 "value":"open_door"
-                }],
          "type":"objectgroup",
          "visible":true,
          "x":0,
