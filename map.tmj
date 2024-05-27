@@ -4012,7 +4012,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"r"
+         "value":"script.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.2",
