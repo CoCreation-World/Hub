@@ -2791,7 +2791,25 @@
          "draworder":"topdown",
          "id":67,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":18.84375,
+                 "id":328,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "bold":true,
+                     "color":"#339900",
+                     "fontfamily":"Times New Roman",
+                     "text":"Hello World"
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":80.234375,
+                 "x":1031.8828125,
+                 "y":1513.578125
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -3693,18 +3711,17 @@
                  "name":"effectLayer",
                  "objects":[
                         {
-                         "class":"area",
                          "height":788,
                          "id":316,
                          "name":"showRoof",
                          "rotation":0,
+                         "type":"area",
                          "visible":true,
                          "width":652,
-                         "x":748,
-                         "y":1360
+                         "x":740.666666666667,
+                         "y":1351.33333333333
                         }, 
                         {
-                         "class":"area",
                          "height":0,
                          "id":321,
                          "name":"topRight",
@@ -3730,6 +3747,7 @@
                                  "y":-4
                                 }],
                          "rotation":0,
+                         "type":"area",
                          "visible":true,
                          "width":0,
                          "x":100,
@@ -3971,9 +3989,9 @@
                  "height":68,
                  "id":96,
                  "name":"RoofOpacity",
-                 "opacity":0.29,
+                 "opacity":0,
                  "type":"tilelayer",
-                 "visible":true,
+                 "visible":false,
                  "width":46,
                  "x":0,
                  "y":0
@@ -3986,7 +4004,7 @@
          "y":0
         }],
  "nextlayerid":109,
- "nextobjectid":324,
+ "nextobjectid":329,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -4015,7 +4033,7 @@
          "value":"script.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.9.2",
+ "tiledversion":"1.11.0",
  "tileheight":32,
  "tilesets":[
         {
@@ -4898,6 +4916,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":"1.9",
+ "version":"1.10",
  "width":46
 }
