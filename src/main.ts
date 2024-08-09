@@ -30,11 +30,11 @@ WA.onInit().then(() => {
     });
 
     WA.room.area.onEnter('topLeft').subscribe(() => {
-        WA.room.showLayer('FG Exterior/RoofOpacity');
+        WA.room.showLayer('FG Exterior/roofTransp');
     });
 
     WA.room.area.onLeave('topLeft').subscribe(() => {
-        WA.room.hideLayer('FG Exterior/RoofOpacity');
+        WA.room.hideLayer('FG Exterior/roofTransp');
     });
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
