@@ -29,11 +29,11 @@ WA.onInit().then(() => {
         WA.room.hideLayer('FG Exterior/glasswall');
     });
 
-    WA.room.area.onEnter('topRight').subscribe(() => {
+    WA.room.area.onEnter('topLeft').subscribe(() => {
         WA.room.showLayer('FG Exterior/RoofOpacity');
     });
 
-    WA.room.area.onLeave('topRight').subscribe(() => {
+    WA.room.area.onLeave('topLeft').subscribe(() => {
         WA.room.hideLayer('FG Exterior/RoofOpacity');
     });
 

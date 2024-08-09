@@ -2848,6 +2848,38 @@
                  "width":644.358136568284,
                  "x":752.016303679269,
                  "y":1384.56672737346
+                }, 
+                {
+                 "height":0,
+                 "id":333,
+                 "name":"topLeft",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":313.621262458472,
+                         "y":-309.634551495017
+                        }, 
+                        {
+                         "x":314.950166112957,
+                         "y":-431.893687707641
+                        }, 
+                        {
+                         "x":-87.7076411960133,
+                         "y":-431.893687707641
+                        }, 
+                        {
+                         "x":-86.3787375415282,
+                         "y":5.31561461794018
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":126.24584717608,
+                 "y":470.431893687708
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3738,7 +3770,7 @@
                  "name":"RoofOpacity",
                  "opacity":0,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":46,
                  "x":0,
                  "y":0
@@ -3751,7 +3783,7 @@
          "y":0
         }],
  "nextlayerid":119,
- "nextobjectid":333,
+ "nextobjectid":335,
  "orientation":"orthogonal",
  "properties":[
         {
