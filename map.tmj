@@ -2791,25 +2791,7 @@
          "draworder":"topdown",
          "id":67,
          "name":"floorLayer",
-         "objects":[
-                {
-                 "height":18.84375,
-                 "id":328,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "bold":true,
-                     "color":"#339900",
-                     "fontfamily":"Times New Roman",
-                     "text":"Hello World"
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":80.234375,
-                 "x":1031.8828125,
-                 "y":1513.578125
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -3718,8 +3700,8 @@
                          "type":"area",
                          "visible":true,
                          "width":652,
-                         "x":740.666666666667,
-                         "y":1351.33333333333
+                         "x":433.992794740161,
+                         "y":1539.79591101504
                         }, 
                         {
                          "height":0,
