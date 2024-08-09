@@ -1,6 +1,7 @@
+import { bootstrapExtra } from "@workadventure/scripting-api-extra";
+
 /// <reference types="@workadventure/iframe-api-typings" />
 
-import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 console.log('Script started successfully');
 
@@ -18,6 +19,22 @@ WA.onInit().then(() => {
     })
 
     WA.room.area.onLeave('clock').subscribe(closePopup)
+
+    WA.room.area.onEnter('showRoof').subscribe(() => {
+        WA.room.showLayer('FG Exterior/Roof');
+    });
+
+    WA.room.area.onLeave('showRoof').subscribe(() => {
+        WA.room.hideLayer('FG Exterior/Roof');
+    });
+
+    WA.room.area.onEnter('topRight').subscribe(() => {
+        WA.room.showLayer('FG Exterior/RoofOpacity');
+    });
+
+    WA.room.area.onLeave('topRight').subscribe(() => {
+        WA.room.hideLayer('FG Exterior/RoofOpacity');
+    });
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
