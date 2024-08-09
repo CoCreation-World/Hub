@@ -2799,7 +2799,7 @@
                         {
                          "name":"closeSound",
                          "type":"string",
-                         "value":""
+                         "value":"https:\/\/assets.mixkit.co\/active_storage\/sfx\/110\/110-preview.mp3"
                         }, 
                         {
                          "name":"default",
@@ -2819,7 +2819,7 @@
                         {
                          "name":"openSound",
                          "type":"string",
-                         "value":""
+                         "value":"https:\/\/assets.mixkit.co\/active_storage\/sfx\/906\/906-preview.mp3"
                         }, 
                         {
                          "name":"persist",
@@ -2829,7 +2829,7 @@
                         {
                          "name":"soundRadius",
                          "type":"int",
-                         "value":0
+                         "value":2
                         }],
                  "rotation":0,
                  "type":"variable",
