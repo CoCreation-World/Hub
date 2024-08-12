@@ -51,4 +51,7 @@ function closePopup(){
     }
 }
 
+WA.onInit().then(() => {if (WA.player.tags.includes('hutriadmin')) {WA.controls.disablePlayerControls()}})
+
 export {};
+
