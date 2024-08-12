@@ -3789,7 +3789,7 @@
         {
          "name":"mapImage",
          "type":"string",
-         "value":"logo.png"
+         "value":"logo.gif"
         }, 
         {
          "name":"mapLink",
