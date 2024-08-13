@@ -56,14 +56,14 @@ WA.onInit().then(() => {if (WA.player.tags.includes('hutriadmin')) {WA.controls.
     WA.onInit().then(async () => {
         // Check if the player has the "admin" tag
         const playerName = WA.player.name;
-        //const wokaurl = WA.player.getWokaPicture;
+        const wokaurl = WA.player.getWokaPicture();
         var boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}`;//&wokaurl=${encodeURIComponent(wokaurl)}
         if (WA.player.tags.includes("admin")) {
             boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}`;
         } ///if function stops here
         // Get the player's name
-    let coWebSite: any;
-        var coWebSite = undefined;
+        console.log('Player names Avatar:', wokaurl);
+    let coWebSite: any = undefined;
         var shouldClose = false;
         WA.room.area.onEnter('website').subscribe(async () => {
             
