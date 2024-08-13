@@ -2870,6 +2870,17 @@
                  "width":391.296172475245,
                  "x":9.42188542599785,
                  "y":11.5464667254233
+                }, 
+                {
+                 "height":111.290379537954,
+                 "id":349,
+                 "name":"website",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":125.279871287128,
+                 "x":902.558372470906,
+                 "y":1672.05010802391
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3773,7 +3784,7 @@
          "y":0
         }],
  "nextlayerid":120,
- "nextobjectid":349,
+ "nextobjectid":350,
  "orientation":"orthogonal",
  "properties":[
         {
