@@ -63,8 +63,7 @@ WA.onInit().then(() => {if (WA.player.tags.includes('hutriadmin')) {WA.controls.
             boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&admin=true`;
         
         } ///if function stops here
-        // Get the player's name
-        console.log(`${playerName}'s Avatar: ${encodeURIComponent(wokaurl)}`);
+       
     let coWebSite: any = undefined;
         var shouldClose = false;
         WA.room.area.onEnter('website').subscribe(async () => {
