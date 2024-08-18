@@ -51,39 +51,57 @@ function closePopup(){
     }
 }
 
-WA.onInit().then(() => {if (WA.player.tags.includes('hutriadmin')) {WA.controls.disableMapEditor()}})
+WA.onInit().then(() => {
+    if (WA.player.tags.includes('hutriadmin')) {
+        WA.controls.disableMapEditor();
+    }
+});
 
-    WA.onInit().then(async () => {
-        // Check if the player has the "admin" tag
-        const playerName = WA.player.name;
-        const wokaurl = await WA.player.getWokaPicture();
-        var boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}`;
-
-        if (WA.player.tags.includes("admin")) {
-            boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&admin=true`;
-        
-        } ///if function stops here
-       
-    let coWebSite: any = undefined;
-        var shouldClose = false;
-        WA.room.area.onEnter('website').subscribe(async () => {
-            
-            coWebSite = await WA.nav.openCoWebSite(boturl);
-            if (shouldClose) {
-                coWebSite.close();
-                coWebSite = undefined;
-                shouldClose = false;
-            }
-        });
+WA.onInit().then(async () => {
+    // Check if the player has the "admin" tag
     
-        WA.room.area.onLeave('website').subscribe(() => {
-            if (coWebSite !== undefined) {
-                coWebSite.close();
-                coWebSite = undefined;
-            } else {
-                shouldClose = true;
-            }
-        });})
+    const playerName = WA.player.name;
+    const playerLanguage = WA.player.language;
+    const wokaurl = await WA.player.getWokaPicture();
+    
+    var boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
+
+    if (WA.player.tags.includes("admin")) {
+        boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&admin=true&language=${playerLanguage}`;
+    }
+    
+    WA.controls.disablePlayerControls();
+    WA.controls.disableRoomList();
+    WA.controls.disableMicrophone();
+    WA.controls.disableWebcam();
+    WA.controls.disablePlayerProximityMeeting();
+    WA.controls.disableScreenSharing();
+    WA.controls.disableWheelZoom();
+    WA.controls.disableRightClick();
+    WA.controls.disableInviteButton();
+    
+    
+    WA.ui.modal.openModal({
+        title: "Welcome",
+        src: boturl,
+        allow: "fullscreen",
+        allowApi: true,
+        position: "center"
+      }, () => {
+        (WA.controls.restorePlayerControls(), WA.controls.restoreMicrophone(),WA.controls.restoreWebcam(),WA.controls.restorePlayerProximityMeeting(),WA.controls.restoreScreenSharing(),WA.controls.restoreWheelZoom(),WA.controls.restoreRightClick(),WA.controls.restoreInviteButton())
+    })});
+
+    //WA.room.area.onEnter('website').subscribe(async () => {
+        //console.info('The modal was closed')
 
 export {};
 
+
+        //to do give tour for player
+
+        // Player will move to the next point after reaching first one or stop if the movement was cancelled
+//WA.player.moveTo(250, 250, 10).then((result) => {
+  //  if (!result.cancelled) {
+    //    WA.player.moveTo(500, 0, 10);
+  //  }
+//})
