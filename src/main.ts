@@ -107,7 +107,6 @@ WA.onInit().then(async () => {
         }, () => {
             if (!WA.player.tags.includes("member")) {
                 WA.controls.restorePlayerControls();
-                WA.controls.restoreRightClick();
 
                 WA.ui.modal.openModal({
                     title: "Login",
