@@ -9,7 +9,7 @@ let currentPopup: any = undefined;
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.log('Scripting API ready');
-    console.log('Player tags: ',WA.player.tags)
+    console.log('Player tags: ', WA.player.tags)
 
     WA.room.area.onEnter('clock').subscribe(() => {
         const today = new Date();
@@ -44,7 +44,7 @@ WA.onInit().then(() => {
 
 }).catch(e => console.error(e));
 
-function closePopup(){
+function closePopup() {
     if (currentPopup !== undefined) {
         currentPopup.close();
         currentPopup = undefined;
@@ -57,19 +57,20 @@ WA.onInit().then(() => {
     }
 });
 
+
 WA.onInit().then(async () => {
     // Check if the player has the "admin" tag
     if (!WA.player.tags.includes("bot")) {
         const playerName = WA.player.name;
         const playerLanguage = WA.player.language;
         const wokaurl = await WA.player.getWokaPicture();
-        
+
         var boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
-    
+
         if (WA.player.tags.includes("admin")) {
             boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&admin=true&language=${playerLanguage}`;
         }
-        
+
         WA.controls.disablePlayerControls();
         WA.controls.disableRoomList();
         WA.controls.disableMicrophone();
@@ -79,32 +80,30 @@ WA.onInit().then(async () => {
         WA.controls.disableWheelZoom();
         WA.controls.disableRightClick();
         WA.controls.disableInviteButton();
-        
-        
+        WA.controls.disableMapEditor();
+
+
         WA.ui.modal.openModal({
             title: "Welcome",
             src: boturl,
             allow: "fullscreen",
             allowApi: true,
             position: "center"
-          }, () => {
-            (WA.controls.restorePlayerControls(), WA.controls.restoreMicrophone(),WA.controls.restoreWebcam(),WA.controls.restorePlayerProximityMeeting(),WA.controls.restoreScreenSharing(),WA.controls.restoreWheelZoom(),WA.controls.restoreRightClick(),WA.controls.restoreInviteButton())
+        }, () => {
+            (WA.controls.restoreMapEditor(), WA.controls.restorePlayerControls(), WA.controls.restoreMicrophone(), WA.controls.restoreWebcam(), WA.controls.restorePlayerProximityMeeting(), WA.controls.restoreScreenSharing(), WA.controls.restoreWheelZoom(), WA.controls.restoreRightClick(), WA.controls.restoreInviteButton())
         });
     }
 });
 
-    //WA.room.area.onEnter('website').subscribe(async () => {
-        //console.info('The modal was closed')
+WA.onInit().then(() => {
+    if (WA.player.tags.length === 0) {
+        WA.controls.disableMapEditor();
+        WA.controls.disableMicrophone();
+        WA.controls.disableWebcam();
+        WA.controls.disableScreenSharing();
+    }
+});
 
 
-export {};
+export { };
 
-
-        //to do give tour for player
-
-        // Player will move to the next point after reaching first one or stop if the movement was cancelled
-//WA.player.moveTo(250, 250, 10).then((result) => {
-  //  if (!result.cancelled) {
-    //    WA.player.moveTo(500, 0, 10);
-  //  }
-//})
