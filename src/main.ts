@@ -94,6 +94,9 @@ WA.onInit().then(async () => {
         WA.controls.disableRightClick();
         WA.controls.disableInviteButton();
         WA.controls.disableMapEditor();
+        WA.controls.disableRoomList();
+        WA.controls.disablePlayerProximityMeeting();
+        WA.controls.disableScreenSharing();
 
         WA.ui.modal.openModal({
             title: "Welcome",
