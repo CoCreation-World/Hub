@@ -92,28 +92,25 @@ WA.onInit().then(async () => {
         }, () => {
             (WA.controls.restoreMapEditor(), WA.controls.restorePlayerControls(), WA.controls.restoreMicrophone(), WA.controls.restoreWebcam(), WA.controls.restorePlayerProximityMeeting(), WA.controls.restoreScreenSharing(), WA.controls.restoreWheelZoom(), WA.controls.restoreRightClick(), WA.controls.restoreInviteButton())
         });
-    }
-});
-
-WA.onInit().then(() => {
-    if (!WA.player.tags.includes("member")) {
-        WA.controls.disablePlayerProximityMeeting();
-        WA.controls.disableScreenSharing();
-        WA.controls.disableRoomList();
-
-        const playerName = WA.player.name; // Declare the playerName variable
-        WA.ui.banner.openBanner({
-            id: "banner-exploration",
-            text: `Welcome ${encodeURIComponent(playerName)} You are not signed in as a member. Please sign in or register to access all features.`,
-            bgColor: "#ff00ff",
-            textColor: "#000000",
-            closable: false,
-            timeToClose: 0,
-            link: {
-                label: "CLICK HERE",
-                url: "https://world.cocreation.world/login"
-            }
-        });
+        if (!WA.player.tags.includes("member")) {
+            WA.controls.disablePlayerProximityMeeting();
+            WA.controls.disableScreenSharing();
+            WA.controls.disableRoomList();
+    
+            const playerName = WA.player.name; // Declare the playerName variable
+            WA.ui.banner.openBanner({
+                id: "banner-exploration",
+                text: `Welcome ${encodeURIComponent(playerName)} You are not signed in as a member. Please sign in or register to access all features.`,
+                bgColor: "#ff00ff",
+                textColor: "#000000",
+                closable: false,
+                timeToClose: 0,
+                link: {
+                    label: "CLICK HERE",
+                    url: "https://world.cocreation.world/login"
+                }
+            });
+        }
     }
 });
 
