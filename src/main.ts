@@ -72,32 +72,18 @@ WA.onInit().then(async () => {
         }
 
         WA.controls.disablePlayerControls();
-        WA.controls.disableRoomList();
         WA.controls.disableMicrophone();
         WA.controls.disableWebcam();
-        WA.controls.disablePlayerProximityMeeting();
-        WA.controls.disableScreenSharing();
         WA.controls.disableWheelZoom();
         WA.controls.disableRightClick();
         WA.controls.disableInviteButton();
         WA.controls.disableMapEditor();
 
-
-        WA.ui.modal.openModal({
-            title: "Welcome",
-            src: boturl,
-            allow: "fullscreen",
-            allowApi: true,
-            position: "center"
-        }, () => {
-            (WA.controls.restoreMapEditor(), WA.controls.restorePlayerControls(), WA.controls.restoreMicrophone(), WA.controls.restoreWebcam(), WA.controls.restorePlayerProximityMeeting(), WA.controls.restoreScreenSharing(), WA.controls.restoreWheelZoom(), WA.controls.restoreRightClick(), WA.controls.restoreInviteButton())
-        });
         if (!WA.player.tags.includes("member")) {
+            WA.controls.disableRoomList();
             WA.controls.disablePlayerProximityMeeting();
             WA.controls.disableScreenSharing();
-            WA.controls.disableRoomList();
-    
-            const playerName = WA.player.name; // Declare the playerName variable
+
             WA.ui.banner.openBanner({
                 id: "banner-exploration",
                 text: `Welcome ${encodeURIComponent(playerName)} You are not signed in as a member. Please sign in or register to access all features.`,
@@ -111,6 +97,28 @@ WA.onInit().then(async () => {
                 }
             });
         }
+
+        WA.ui.modal.openModal({
+            title: "Welcome",
+            src: boturl,
+            allow: "fullscreen",
+            allowApi: true,
+            position: "center"
+        }, () => {
+            WA.controls.restorePlayerControls();
+            WA.controls.restoreMicrophone();
+            WA.controls.restoreWebcam();
+            WA.controls.restoreWheelZoom();
+            WA.controls.restoreRightClick();
+            WA.controls.restoreInviteButton();
+            WA.controls.restoreMapEditor();
+
+            if (!WA.player.tags.includes("member")) {
+                WA.controls.restoreRoomList();
+                WA.controls.restorePlayerProximityMeeting();
+                WA.controls.restoreScreenSharing();
+            }
+        });
     }
 });
 
