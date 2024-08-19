@@ -97,10 +97,9 @@ WA.onInit().then(async () => {
 
 WA.onInit().then(() => {
     if (!WA.player.tags.includes("member")) {
-        WA.controls.disableMapEditor();
-        WA.controls.disableMicrophone();
-        WA.controls.disableWebcam();
+        WA.controls.disablePlayerProximityMeeting();
         WA.controls.disableScreenSharing();
+        WA.controls.disableRoomList();
 
         const playerName = WA.player.name; // Declare the playerName variable
         WA.ui.banner.openBanner({
