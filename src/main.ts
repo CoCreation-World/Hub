@@ -85,11 +85,9 @@ WA.onInit().then(async () => {
 
         if (WA.player.tags.includes("admin")) {
             boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&admin=true&language=${playerLanguage}`;
-        }
             
-        if (!WA.player.tags.includes("member")) {
-            boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&explorer=true&language=${playerLanguage}`;
         }
+
         WA.controls.disablePlayerControls();
         WA.controls.disableMicrophone();
         WA.controls.disableWebcam();
