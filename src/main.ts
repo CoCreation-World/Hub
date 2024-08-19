@@ -105,13 +105,13 @@ WA.onInit().then(() => {
         const playerName = WA.player.name; // Declare the playerName variable
         WA.ui.banner.openBanner({
             id: "banner-exploration",
-            text: `Welcome ${encodeURIComponent(playerName)} You are not a signed in as a member. Please sign in or register to access all features.`,
+            text: `Welcome ${encodeURIComponent(playerName)} You are not signed in as a member. Please sign in or register to access all features.`,
             bgColor: "#ff00ff",
             textColor: "#000000",
             closable: false,
             timeToClose: 0,
             link: {
-                label: "Register",
+                label: "CLICK HERE",
                 url: "https://world.cocreation.world/login"
             }
         });
