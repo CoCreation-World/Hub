@@ -96,11 +96,24 @@ WA.onInit().then(async () => {
 });
 
 WA.onInit().then(() => {
-    if (WA.player.tags.length === 0) {
+    if (!WA.player.tags.includes("member")) {
         WA.controls.disableMapEditor();
         WA.controls.disableMicrophone();
         WA.controls.disableWebcam();
         WA.controls.disableScreenSharing();
+
+        WA.ui.banner.openBanner({
+            id: "banner-exploration",
+            text: "Banner test",
+            bgColor: "#000000",
+            textColor: "#ffffff",
+            closable: false,
+            timeToClose: 120000,
+            link: {
+                label: "Register",
+                url: "https://workadventu.re"
+            }
+        });
     }
 });
 
