@@ -102,16 +102,17 @@ WA.onInit().then(() => {
         WA.controls.disableWebcam();
         WA.controls.disableScreenSharing();
 
+        const playerName = WA.player.name; // Declare the playerName variable
         WA.ui.banner.openBanner({
             id: "banner-exploration",
-            text: "Banner test",
-            bgColor: "#000000",
-            textColor: "#ffffff",
+            text: `Welcome ${encodeURIComponent(playerName)} You are not a signed in as a member. Please sign in or register to access all features.`,
+            bgColor: "#ff00ff",
+            textColor: "#000000",
             closable: false,
-            timeToClose: 120000,
+            timeToClose: 0,
             link: {
                 label: "Register",
-                url: "https://workadventu.re"
+                url: "https://world.cocreation.world/login"
             }
         });
     }
