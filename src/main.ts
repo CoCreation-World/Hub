@@ -109,6 +109,15 @@ WA.onInit().then(async () => {
                 WA.controls.restorePlayerControls();
                 WA.controls.restoreRightClick();
 
+                WA.ui.modal.openModal({
+                    title: "Login",
+                    src: "https://world.cocreation.world/login",
+                    allow: "fullscreen",
+                    allowApi: false,
+                    position: "left"
+                });
+
+
             } else {
                 WA.controls.restorePlayerControls();
                 WA.controls.restoreMicrophone();
