@@ -188,7 +188,7 @@
                 {
                  "name":"tag",
                  "type":"string",
-                 "value":"member"
+                 "value":""
                 }],
          "type":"tilelayer",
          "visible":true,
