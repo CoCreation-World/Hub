@@ -108,15 +108,6 @@ WA.onInit().then(async () => {
             if (!WA.player.tags.includes("member")) {
                 WA.controls.restorePlayerControls();
 
-                WA.ui.modal.openModal({
-                    title: "Login",
-                    src: "https://world.cocreation.world/login",
-                    allow: "fullscreen",
-                    allowApi: false,
-                    position: "left"
-                });
-
-
             } else {
                 WA.controls.restorePlayerControls();
                 WA.controls.restoreMicrophone();
