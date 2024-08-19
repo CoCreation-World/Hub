@@ -105,15 +105,18 @@ WA.onInit().then(async () => {
             allowApi: true,
             position: "center"
         }, () => {
-            WA.controls.restorePlayerControls();
-            WA.controls.restoreMicrophone();
-            WA.controls.restoreWebcam();
-            WA.controls.restoreWheelZoom();
-            WA.controls.restoreRightClick();
-            WA.controls.restoreInviteButton();
-            WA.controls.restoreMapEditor();
-
             if (!WA.player.tags.includes("member")) {
+                WA.controls.restorePlayerControls();
+                WA.controls.restoreRightClick();
+
+            } else {
+                WA.controls.restorePlayerControls();
+                WA.controls.restoreMicrophone();
+                WA.controls.restoreWebcam();
+                WA.controls.restoreWheelZoom();
+                WA.controls.restoreRightClick();
+                WA.controls.restoreInviteButton();
+                WA.controls.restoreMapEditor();
                 WA.controls.restoreRoomList();
                 WA.controls.restorePlayerProximityMeeting();
                 WA.controls.restoreScreenSharing();
