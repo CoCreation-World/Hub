@@ -59,37 +59,39 @@ WA.onInit().then(() => {
 
 WA.onInit().then(async () => {
     // Check if the player has the "admin" tag
+    if (!WA.player.tags.includes("bot")) {
+        const playerName = WA.player.name;
+        const playerLanguage = WA.player.language;
+        const wokaurl = await WA.player.getWokaPicture();
+        
+        var boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
     
-    const playerName = WA.player.name;
-    const playerLanguage = WA.player.language;
-    const wokaurl = await WA.player.getWokaPicture();
-    
-    var boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
-
-    if (WA.player.tags.includes("admin")) {
-        boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&admin=true&language=${playerLanguage}`;
+        if (WA.player.tags.includes("admin")) {
+            boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&admin=true&language=${playerLanguage}`;
+        }
+        
+        WA.controls.disablePlayerControls();
+        WA.controls.disableRoomList();
+        WA.controls.disableMicrophone();
+        WA.controls.disableWebcam();
+        WA.controls.disablePlayerProximityMeeting();
+        WA.controls.disableScreenSharing();
+        WA.controls.disableWheelZoom();
+        WA.controls.disableRightClick();
+        WA.controls.disableInviteButton();
+        
+        
+        WA.ui.modal.openModal({
+            title: "Welcome",
+            src: boturl,
+            allow: "fullscreen",
+            allowApi: true,
+            position: "center"
+          }, () => {
+            (WA.controls.restorePlayerControls(), WA.controls.restoreMicrophone(),WA.controls.restoreWebcam(),WA.controls.restorePlayerProximityMeeting(),WA.controls.restoreScreenSharing(),WA.controls.restoreWheelZoom(),WA.controls.restoreRightClick(),WA.controls.restoreInviteButton())
+        });
     }
-    
-    WA.controls.disablePlayerControls();
-    WA.controls.disableRoomList();
-    WA.controls.disableMicrophone();
-    WA.controls.disableWebcam();
-    WA.controls.disablePlayerProximityMeeting();
-    WA.controls.disableScreenSharing();
-    WA.controls.disableWheelZoom();
-    WA.controls.disableRightClick();
-    WA.controls.disableInviteButton();
-    
-    
-    WA.ui.modal.openModal({
-        title: "Welcome",
-        src: boturl,
-        allow: "fullscreen",
-        allowApi: true,
-        position: "center"
-      }, () => {
-        (WA.controls.restorePlayerControls(), WA.controls.restoreMicrophone(),WA.controls.restoreWebcam(),WA.controls.restorePlayerProximityMeeting(),WA.controls.restoreScreenSharing(),WA.controls.restoreWheelZoom(),WA.controls.restoreRightClick(),WA.controls.restoreInviteButton())
-    })});
+});
 
     //WA.room.area.onEnter('website').subscribe(async () => {
         //console.info('The modal was closed')
