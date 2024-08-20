@@ -69,7 +69,7 @@ WA.onInit().then(async () => {
             timeToClose: 0,
             link: {
                 label: "CLICK HERE",
-                url: "https://world.cocreation.world/login"
+                url: "https://forum.cocreation.world/login"
             }
         });
     }
