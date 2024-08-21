@@ -108,7 +108,8 @@ WA.onInit().then(async () => {
         }, () => {
             if (!WA.player.tags.includes("member")) {
                 WA.controls.restorePlayerControls();
-
+                WA.controls.restoreWheelZoom();
+                // WA.controls.restoreRightClick(); // currently deactivated. as this would allow users to sneak into closed areas.... its a WA bug. You cant walk into areas you dont have access to, using arrow keys. But you can using right click....
             } else {
                 WA.controls.restorePlayerControls();
                 WA.controls.restoreMicrophone();
