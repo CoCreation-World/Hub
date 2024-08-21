@@ -3353,7 +3353,7 @@
                  "height":68,
                  "id":56,
                  "name":"FG Outer Shadow",
-                 "opacity":0.77,
+                 "opacity":0.79,
                  "type":"tilelayer",
                  "visible":true,
                  "width":46,
