@@ -2868,7 +2868,7 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":"https:\/\/minio-production-fa1d.up.railway.app\/typebot\/public\/workspaces\/clwxv3blz001hp28kvtibhtth\/typebots\/cm0v10et3000ahfv7f1qc2wju\/blocks\/pjjo5ndtfhw8ffu6l97677sp?v=1725887852949"
+                         "value":"https:\/\/minio-production-fa1d.up.railway.app\/typebot\/public\/workspaces\/clwxv3blz001hp28kvtibhtth\/typebots\/cm0v10et3000ahfv7f1qc2wju\/blocks\/pjjo5ndtfhw8ffu6l97677sp"
                         }],
                  "rotation":0,
                  "type":"website",
@@ -3919,7 +3919,7 @@
                         {
                          "name":"collides",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }]
                 }, 
                 {
