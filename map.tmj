@@ -273,7 +273,7 @@
                 {
                  "name":"autoClose",
                  "type":"bool",
-                 "value":true
+                 "value":false
                 }, 
                 {
                  "name":"autoOpen",
@@ -2868,7 +2868,7 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":"https:\/\/minio-production-fa1d.up.railway.app\/typebot\/public\/workspaces\/clwxv3blz001hp28kvtibhtth\/typebots\/clzr8yhp7000111hfrc33aev7\/blocks\/ny5vtj1de40pxs69l0momvmx?v=1724071668344"
+                         "value":"https:\/\/minio-production-fa1d.up.railway.app\/typebot\/public\/workspaces\/clwxv3blz001hp28kvtibhtth\/typebots\/cm0v10et3000ahfv7f1qc2wju\/blocks\/pjjo5ndtfhw8ffu6l97677sp?v=1725887852949"
                         }],
                  "rotation":0,
                  "type":"website",
