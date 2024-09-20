@@ -70,26 +70,26 @@ WA.onInit().then(() => {
     }
 });
 
-WA.onInit().then(async () => {
-    if (!WA.player.tags.includes("member")) {
-        const playerName = WA.player.name; // Declare and initialize the 'playerName' variable
-        WA.ui.banner.openBanner({
-            id: "banner-exploration",
-            text: `Welcome ${encodeURIComponent(playerName)} You are not signed in as a member. Please sign in or register to access all features.`,
-            bgColor: "#ff00ff",
-            textColor: "#000000",
-            closable: false,
-            timeToClose: 0,
-            link: {
-                label: "CLICK HERE",
-                url: "https://forum.cocreation.world/login"
-            }
-        });
-    }
-});
+//WA.onInit().then(async () => {
+  //  if (!WA.player.tags.includes("member")) {
+        //const playerName = WA.player.name; // Declare and initialize the 'playerName' variable
+        //WA.ui.banner.openBanner({
+         //   id: "banner-exploration",
+           // text: `Welcome ${encodeURIComponent(playerName)} You are not signed in as a member. Please sign in or register to access all features.`,
+           // bgColor: "#ff00ff",
+           // textColor: "#000000",
+            //closable: false,
+          //  timeToClose: 0,
+           // link: {
+            //    label: "CLICK HERE",
+           //     url: "https://forum.cocreation.world/login"
+          //  }
+       // });
+   // }
+//});
 WA.onInit().then(async () => {
     // Check if the player has the "admin" tag
-    if (!WA.player.tags.includes("bot")) {
+    if (!WA.player.tags.includes("bot") && !WA.player.tags.includes("member")) {
         const playerName = WA.player.name;
         const playerLanguage = WA.player.language;
         const wokaurl = await WA.player.getWokaPicture();
