@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <meta name="title" content="WorkAdventure Starter Kit">
-    <title>CCW HUB test map</title>
+    <title>CCW-Hub map</title>
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
     <script>
         window.onload = function () {
@@ -22,10 +22,7 @@
             document.getElementById('testMapBtnURL').href = url;
             document.getElementById('testMapURL').innerText = url;
 
-            const tmjURL = window.location.protocol + '//' + window.location.host + path + 'map.tmj';
-            document.getElementById('tmjURL').innerText = tmjURL;
-
-            const gettingStartedLink = 'https://workadventu.re/getting-started?name=Map&mapUrl=' + tmjURL;
+            const gettingStartedLink = 'https://workadventu.re/getting-started?name=Map&mapUrl=map.tmj';
             document.getElementById('gettingStartedLink').href = gettingStartedLink;
 
         };
