@@ -4500,7 +4500,7 @@
         {
          "name":"mapDescription",
          "type":"string",
-         "value":"The Metaverse of the worlds first international Metaverse for professionals."
+         "value":"Connect, collaborate, and contribute on shared quests to achieve our sustainable development goals.\n\n"
         }, 
         {
          "name":"mapImage",
@@ -4510,7 +4510,7 @@
         {
          "name":"mapLink",
          "type":"string",
-         "value":"CoCreation.World"
+         "value":"https:\/\/world.CoCreation.World"
         }, 
         {
          "name":"mapName",
