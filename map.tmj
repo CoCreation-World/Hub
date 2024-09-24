@@ -3514,7 +3514,7 @@
                          "value":"this is where visitors arrive. "
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":308.19774718398,
                  "x":921.464330413016,
@@ -3536,7 +3536,7 @@
                          "value":"Self explanatory. This is a meeting room."
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":352.002755944931,
                  "x":520.181350438047,
@@ -3558,7 +3558,7 @@
                          "value":"a VIP area, currently used mainly for experimenting and testing. At events, this is where we summon speakers."
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":389.55,
                  "x":939.455287859825,
@@ -3580,7 +3580,7 @@
                          "value":"Presentations and Showcases of popular and valuable Consortium Groups, Members, Partners and Sponsors. The blue portals brings visitors to a larger booth area."
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":499.062,
                  "x":122.809425531915,
@@ -3602,7 +3602,7 @@
                          "value":"play social games and arcade nostalgia. The red portals brings visitors to a larger game room."
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":352.003,
                  "x":296.464081977472,
@@ -3624,7 +3624,7 @@
                          "value":"Equipped with a timer to get things done. Work alongside others."
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":353.567455569462,
                  "x":950.406510012516,
@@ -3646,7 +3646,7 @@
                          "value":"Showcasing some AI Projects"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":190.864,
                  "x":746.245096370463,
@@ -3668,7 +3668,7 @@
                          "value":"Smaller version of our larger Hackathon-Map. The green portals brings visitors to a larger collaboration and event room."
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":358.260366708386,
                  "x":955.882332290363,
@@ -3690,7 +3690,7 @@
                          "value":"Could also be use for coaching. A informal and open meeting area."
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":308.198,
                  "x":127.503002503129,
@@ -3712,7 +3712,7 @@
                          "value":"This is a stage, for our public Consortium events. When there is no active event, the Microphone isnt activated to broadcast to the room."
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":308.198,
                  "x":992.646932415519,
