@@ -3392,8 +3392,8 @@
                  "type":"area",
                  "visible":true,
                  "width":644.358136568284,
-                 "x":751.134650874144,
-                 "y":1421.30226092035
+                 "x":761.371168303162,
+                 "y":1359.88315634624
                 }, 
                 {
                  "height":419.047411945024,
@@ -3475,9 +3475,101 @@
                  "width":0,
                  "x":842.928899299986,
                  "y":375.588500217
+                }, 
+                {
+                 "height":364.53433678269,
+                 "id":364,
+                 "name":"Library",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"In the Library we store recent and important blog-posts, articles and litrature related to CoCreation, Startup, Entrepeneurship and Sustainable Development Goals."
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":637.347130761994,
+                 "x":117.591721542803,
+                 "y":1471.07243650047
+                }, 
+                {
+                 "height":0,
+                 "id":366,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1389.21226232053,
+                 "y":1704.82473160005
                 }],
          "opacity":0.03,
          "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "id":131,
+         "layers":[
+                {
+                 "draworder":"topdown",
+                 "id":130,
+                 "name":"Billboard",
+                 "objects":[
+                        {
+                         "height":0,
+                         "id":369,
+                         "name":"textVariable",
+                         "point":true,
+                         "properties":[
+                                {
+                                 "name":"default",
+                                 "type":"string",
+                                 "value":"empty"
+                                }, 
+                                {
+                                 "name":"description",
+                                 "type":"string",
+                                 "value":"Hackathon Billboard"
+                                }, 
+                                {
+                                 "name":"label",
+                                 "type":"string",
+                                 "value":"\ud83d\udfe3 Code for purple room"
+                                }, 
+                                {
+                                 "name":"persist",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"writableBy",
+                                 "type":"string",
+                                 "value":"admin"
+                                }],
+                         "rotation":0,
+                         "type":"variable",
+                         "visible":true,
+                         "width":0,
+                         "x":1292.4950164323,
+                         "y":533.915198534562
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }],
+         "name":"configuration",
+         "opacity":1,
+         "type":"group",
          "visible":true,
          "x":0,
          "y":0
@@ -4127,21 +4219,20 @@
                  "name":"screen",
                  "objects":[
                         {
-                         "height":59.6060800368332,
-                         "id":362,
-                         "name":"hackathon-screen",
-                         "properties":[
-                                {
-                                 "name":"url",
-                                 "type":"string",
-                                 "value":"https:\/\/www.webcountdown.de\/?c=3723"
-                                }],
+                         "height":58.173527490437,
+                         "id":367,
+                         "name":"text",
                          "rotation":0,
-                         "type":"website",
+                         "text":
+                            {
+                             "text":"{{ textVariable }}",
+                             "wrap":true
+                            },
+                         "type":"variable",
                          "visible":true,
-                         "width":121.497704158141,
-                         "x":1171.27585434158,
-                         "y":528.17760441146
+                         "width":119.564152490437,
+                         "x":1172.64074580101,
+                         "y":528.803436136253
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -4488,8 +4579,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":130,
- "nextobjectid":363,
+ "nextlayerid":132,
+ "nextobjectid":370,
  "orientation":"orthogonal",
  "properties":[
         {
