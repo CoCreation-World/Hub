@@ -4217,23 +4217,7 @@
                  "draworder":"topdown",
                  "id":126,
                  "name":"screen",
-                 "objects":[
-                        {
-                         "height":58.173527490437,
-                         "id":367,
-                         "name":"text",
-                         "rotation":0,
-                         "text":
-                            {
-                             "text":"{{ textVariable }}",
-                             "wrap":true
-                            },
-                         "type":"variable",
-                         "visible":true,
-                         "width":119.564152490437,
-                         "x":1172.64074580101,
-                         "y":528.803436136253
-                        }],
+                 "objects":[],
                  "opacity":1,
                  "type":"objectgroup",
                  "visible":true,
@@ -4580,7 +4564,7 @@
          "y":0
         }],
  "nextlayerid":132,
- "nextobjectid":370,
+ "nextobjectid":375,
  "orientation":"orthogonal",
  "properties":[
         {
