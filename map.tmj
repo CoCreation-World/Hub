@@ -3489,7 +3489,7 @@
                         {
                          "name":"description",
                          "type":"string",
-                         "value":"In the Library we store recent and important blog-posts, articles and litrature related to CoCreation, Startup, Entrepeneurship and Sustainable Development Goals."
+                         "value":"In the Library we store recent and important blog-posts, articles and litrature related to CoCreation, Startup, Entrepeneurship and Sustainable Development Goals. The yellow portals brings visitors to a larger Library room."
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3499,17 +3499,226 @@
                  "y":1471.07243650047
                 }, 
                 {
-                 "height":0,
-                 "id":366,
-                 "name":"",
+                 "height":209.637046307885,
+                 "id":375,
+                 "name":"Spawn Area and Lobby",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"this is where visitors arrive. "
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":0,
-                 "x":1389.21226232053,
-                 "y":1704.82473160005
+                 "width":308.19774718398,
+                 "x":921.464330413016,
+                 "y":1698.99874843554
+                }, 
+                {
+                 "height":275.344133917396,
+                 "id":377,
+                 "name":"Meeting-Room",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"Self explanatory. This is a meeting room."
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":352.002755944931,
+                 "x":520.181350438047,
+                 "y":574.155217146433
+                }, 
+                {
+                 "height":250.313,
+                 "id":378,
+                 "name":"Greenroom",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"a VIP area, currently used mainly for experimenting and testing. At events, this is where we summon speakers."
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":389.55,
+                 "x":939.455287859825,
+                 "y":1063.82973279099
+                }, 
+                {
+                 "height":386.42,
+                 "id":379,
+                 "name":"HoloBooths",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"Presentations and Showcases of popular and valuable Consortium Groups, Members, Partners and Sponsors. The blue portals brings visitors to a larger booth area."
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":499.062,
+                 "x":122.809425531915,
+                 "y":1002.03405506884
+                }, 
+                {
+                 "height":275.344,
+                 "id":380,
+                 "name":"Games",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"play social games and arcade nostalgia. The red portals brings visitors to a larger game room."
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":352.003,
+                 "x":296.464081977472,
+                 "y":255.006347934919
+                }, 
+                {
+                 "height":395.807078848561,
+                 "id":381,
+                 "name":"Co-Working",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"Equipped with a timer to get things done. Work alongside others."
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":353.567455569462,
+                 "x":950.406510012516,
+                 "y":148.623369211514
+                }, 
+                {
+                 "height":358.26,
+                 "id":382,
+                 "name":"Bots",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"Showcasing some AI Projects"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":190.864,
+                 "x":746.245096370463,
+                 "y":60.2317021276596
+                }, 
+                {
+                 "height":300.375210262829,
+                 "id":383,
+                 "name":"Makerspace",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"Smaller version of our larger Hackathon-Map. The green portals brings visitors to a larger collaboration and event room."
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":358.260366708386,
+                 "x":955.882332290363,
+                 "y":554.599628911139
+                }, 
+                {
+                 "height":209.637,
+                 "id":384,
+                 "name":"Couch",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"Could also be use for coaching. A informal and open meeting area."
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":308.198,
+                 "x":127.503002503129,
+                 "y":624.217795369212
+                }, 
+                {
+                 "height":209.637,
+                 "id":385,
+                 "name":"Stage",
+                 "properties":[
+                        {
+                         "name":"ai-zone",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"This is a stage, for our public Consortium events. When there is no active event, the Microphone isnt activated to broadcast to the room."
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":308.198,
+                 "x":992.646932415519,
+                 "y":1403.3166689612
                 }],
-         "opacity":0.03,
+         "opacity":1,
          "type":"objectgroup",
          "visible":true,
          "x":0,
@@ -4564,7 +4773,7 @@
          "y":0
         }],
  "nextlayerid":132,
- "nextobjectid":375,
+ "nextobjectid":386,
  "orientation":"orthogonal",
  "properties":[
         {
