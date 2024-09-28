@@ -144,5 +144,66 @@ WA.onInit().then(async () => {
 });
 
 
+async function updateTitle(variableName: string) {
+    var text: string = WA.state[variableName] as string;
+    console.log(`Text for ${variableName} is configured as ` + text);
+    // var color: string = WA.state.colorVariable as string;
+    // console.log('Color is configured as ' + color);
+    var newTitle = `https://iw6tkif7th7yp5ax2ufzkl3kce0bcuys.lambda-url.us-east-1.on.aws/?text=${encodeURIComponent(text)}&imageType=caption&width=78&height=50&color=yellow`;
+    console.log('New img-url of title is ' + newTitle);
+    const website = await WA.room.website.get(variableName.replace('text', 'display'));
+    website.url = newTitle;
+    website.visible = true;
+    console.log(`Title for ${variableName} has been changed to ${website.url}`);
+};
+
+WA.onInit().then(() => { 
+    updateTitle('holo1-text'); 
+    updateTitle('holo2-text'); 
+    updateTitle('holo3-text'); 
+    updateTitle('holo4-text'); 
+    updateTitle('holo5-text'); 
+    updateTitle('holo6-text'); 
+});
+
+// Listen for changes to each text variable
+['holo1-text', 'holo2-text', 'holo3-text', 'holo4-text', 'holo5-text', 'holo6-text'].forEach(variableName => {
+    WA.state.onVariableChange(variableName).subscribe(() => {
+        console.log(`${variableName} variable changed`);
+        updateTitle(variableName);
+    });
+});
+
+// Listen for changes to the colorVariable
+// WA.state.onVariableChange('colorVariable').subscribe(() => {
+//     console.log(`Color variable changed`);
+//     ['holo1-text', 'holo2-text', 'holo3-text', 'holo4-text', 'holo5-text', 'holo6-text'].forEach(variableName => {
+//         updateTitle(variableName);
+//     });
+// });
+async function updateMakerMeet() {
+    var makerMeetValue: string = WA.state.makerMeet as string;
+    console.log(`makerMeet variable changed to ${makerMeetValue}`);
+    
+    if (makerMeetValue === "") {
+        const area = await WA.room.area.get('makerspaceJitsi');
+        if (area) {
+            area.height = 0;
+            area.width = 0;
+            console.log(`Area 'makerSpaceJitsi' resized to height: 1, width: 1`);
+        }
+    } else if (makerMeetValue === "1") {
+        const area = await WA.room.area.get('makerspaceJitsi');
+        if (area) {
+            area.height = 252;
+            area.width = 352;
+            console.log(`Area 'makerSpaceJitsi' resized to height: 252, width: 352`);
+        }
+    }
+}
+
+WA.state.onVariableChange('makerMeet').subscribe(() => {
+    updateMakerMeet();
+});
 export { };
 
