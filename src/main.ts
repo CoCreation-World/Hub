@@ -164,10 +164,11 @@ WA.onInit().then(() => {
     updateTitle('holo4-text'); 
     updateTitle('holo5-text'); 
     updateTitle('holo6-text'); 
+    updateTitle('makerHolo-text'); 
 });
 
 // Listen for changes to each text variable
-['holo1-text', 'holo2-text', 'holo3-text', 'holo4-text', 'holo5-text', 'holo6-text'].forEach(variableName => {
+['holo1-text', 'holo2-text', 'holo3-text', 'holo4-text', 'holo5-text', 'holo6-text', 'makerHolo-text'].forEach(variableName => {
     WA.state.onVariableChange(variableName).subscribe(() => {
         console.log(`${variableName} variable changed`);
         updateTitle(variableName);
@@ -181,6 +182,28 @@ WA.onInit().then(() => {
 //         updateTitle(variableName);
 //     });
 // });
+
+
+async function updateBillboardText() {
+    var text: string = WA.state.makerspaceBillboardText as string;
+    console.log(`Text for makerspacebillboardText is configured as ` + text);
+    var newTitle = `https://iw6tkif7th7yp5ax2ufzkl3kce0bcuys.lambda-url.us-east-1.on.aws/?text=${encodeURIComponent(text)}&imageType=caption&width=122&height=60&color=black`;
+    console.log('New img-url of title is ' + newTitle);
+    const website = await WA.room.website.get('makerspaceBillboard');
+    website.url = newTitle;
+    website.visible = true;
+    console.log(`Title for makerspacebillboardText has been changed to ${website.url}`);
+};
+
+WA.onInit().then(() => { 
+    updateBillboardText(); 
+});
+
+WA.state.onVariableChange('makerspacebillboardText').subscribe(() => {
+    console.log(`makerspacebillboardText variable changed`);
+    updateBillboardText();
+});
+
 async function updateMakerMeet() {
     var makerMeetValue: string = WA.state.makerMeet as string;
     console.log(`makerMeet variable changed to ${makerMeetValue}`);
@@ -201,6 +224,10 @@ async function updateMakerMeet() {
         }
     }
 }
+
+WA.onInit().then(() => { 
+    updateMakerMeet(); 
+});
 
 WA.state.onVariableChange('makerMeet').subscribe(() => {
     updateMakerMeet();

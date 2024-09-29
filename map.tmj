@@ -3671,8 +3671,8 @@
                  "type":"area",
                  "visible":true,
                  "width":88.260366708386,
-                 "x":951.882332290363,
-                 "y":810.599628911139
+                 "x":986.009474061043,
+                 "y":854.051335617174
                 }, 
                 {
                  "height":41.637,
@@ -3760,7 +3760,7 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":"{{ holo2-text }}"
+                         "value":"{{{ holo2-text }}}"
                         }],
                  "rotation":0,
                  "type":"website",
@@ -3777,7 +3777,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"{{ holo2-url }}"
+                         "value":"{{{ holo2-url }}}"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3794,7 +3794,7 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":"{{ holo4-text }}"
+                         "value":"{{{ holo4-text }}}"
                         }],
                  "rotation":0,
                  "type":"website",
@@ -3811,7 +3811,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"{{ holo4-url }}"
+                         "value":"{{{ holo4-url }}}"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3828,7 +3828,7 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":"{{ holo3-text }}"
+                         "value":"{{{ holo3-text }}}"
                         }],
                  "rotation":0,
                  "type":"website",
@@ -3845,7 +3845,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"{{ holo3-url }}"
+                         "value":"{{{ holo3-url }}}"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3862,7 +3862,7 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":"{{ holo5-text }}"
+                         "value":"{{{ holo5-text }}}"
                         }],
                  "rotation":0,
                  "type":"website",
@@ -3879,7 +3879,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"{{ holo5-url }}"
+                         "value":"{{{ holo5-url }}}"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3896,7 +3896,7 @@
                         {
                          "name":"url",
                          "type":"string",
-                         "value":"{{ holo6-text }}"
+                         "value":"{{{ holo6-text }}}"
                         }],
                  "rotation":0,
                  "type":"website",
@@ -3913,7 +3913,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"{{ holo6-url }}"
+                         "value":"{{{ holo6-url }}}"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3948,6 +3948,57 @@
                  "width":352,
                  "x":962,
                  "y":603
+                }, 
+                {
+                 "height":50,
+                 "id":416,
+                 "name":"makerHolo-display",
+                 "properties":[
+                        {
+                         "name":"url",
+                         "type":"string",
+                         "value":"{{{ makerHolo-text }}}"
+                        }],
+                 "rotation":0,
+                 "type":"website",
+                 "visible":true,
+                 "width":78,
+                 "x":937.304123050597,
+                 "y":772.404033581622
+                }, 
+                {
+                 "height":67.3099,
+                 "id":417,
+                 "name":"makerHolo-website",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"{{{ makerHolo-url }}}"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":79.0393,
+                 "x":936.721123050597,
+                 "y":800.764033581622
+                }, 
+                {
+                 "height":60,
+                 "id":419,
+                 "name":"hh",
+                 "properties":[
+                        {
+                         "name":"url",
+                         "type":"string",
+                         "value":"{{{ makerspaceBillboardText }}}"
+                        }],
+                 "rotation":0,
+                 "type":"website",
+                 "visible":true,
+                 "width":122,
+                 "x":1171.00805979434,
+                 "y":528.004702225088
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3960,29 +4011,29 @@
          "layers":[
                 {
                  "draworder":"topdown",
-                 "id":130,
-                 "name":"Billboard",
+                 "id":133,
+                 "name":"makerMeet",
                  "objects":[
                         {
                          "height":0,
-                         "id":369,
-                         "name":"textVariable",
+                         "id":418,
+                         "name":"makerspaceBillboardText",
                          "point":true,
                          "properties":[
                                 {
                                  "name":"default",
                                  "type":"string",
-                                 "value":"empty"
+                                 "value":"Today is a good day to get something done"
                                 }, 
                                 {
                                  "name":"description",
                                  "type":"string",
-                                 "value":"Hackathon Billboard"
+                                 "value":"Text to be displayed at the Billboard at the top right"
                                 }, 
                                 {
                                  "name":"label",
                                  "type":"string",
-                                 "value":"\ud83d\udfe3 Code for purple room"
+                                 "value":"Makerspace Billboard"
                                 }, 
                                 {
                                  "name":"persist",
@@ -3998,20 +4049,9 @@
                          "type":"variable",
                          "visible":true,
                          "width":0,
-                         "x":1292.4950164323,
-                         "y":533.915198534562
-                        }],
-                 "opacity":1,
-                 "type":"objectgroup",
-                 "visible":true,
-                 "x":0,
-                 "y":0
-                }, 
-                {
-                 "draworder":"topdown",
-                 "id":133,
-                 "name":"makerMeet",
-                 "objects":[
+                         "x":1306,
+                         "y":533
+                        }, 
                         {
                          "height":0,
                          "id":413,
@@ -4021,7 +4061,7 @@
                                 {
                                  "name":"allowed_values",
                                  "type":"string",
-                                 "value":"{ \"Yes\": \"1\", \"No\": \"\" }"
+                                 "value":"{ \"Meeting-Area\": \"1\", \"Only Bubbles\": \"\" }"
                                 }, 
                                 {
                                  "name":"default",
@@ -4046,7 +4086,7 @@
                                 {
                                  "name":"type",
                                  "type":"string",
-                                 "value":"select"
+                                 "value":"radio"
                                 }, 
                                 {
                                  "name":"writableBy",
@@ -4059,6 +4099,82 @@
                          "width":0,
                          "x":992,
                          "y":601.333333333333
+                        }, 
+                        {
+                         "height":0,
+                         "id":414,
+                         "name":"makerHolo-text",
+                         "point":true,
+                         "properties":[
+                                {
+                                 "name":"default",
+                                 "type":"string",
+                                 "value":"Makerspace"
+                                }, 
+                                {
+                                 "name":"description",
+                                 "type":"string",
+                                 "value":"(Tipp: 14 Characters are well readable)"
+                                }, 
+                                {
+                                 "name":"label",
+                                 "type":"string",
+                                 "value":"Text Hologramm"
+                                }, 
+                                {
+                                 "name":"persist",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"writableBy",
+                                 "type":"string",
+                                 "value":"admin"
+                                }],
+                         "rotation":0,
+                         "type":"variable",
+                         "visible":true,
+                         "width":0,
+                         "x":974.666333333333,
+                         "y":773.33
+                        }, 
+                        {
+                         "height":0,
+                         "id":415,
+                         "name":"makerHolo-url",
+                         "point":true,
+                         "properties":[
+                                {
+                                 "name":"default",
+                                 "type":"string",
+                                 "value":"https:\/\/forum.cocreation.world\/c\/cal\/23"
+                                }, 
+                                {
+                                 "name":"description",
+                                 "type":"string",
+                                 "value":"bottom left (Tipp: 14 Characters are well readable)"
+                                }, 
+                                {
+                                 "name":"label",
+                                 "type":"string",
+                                 "value":"URL Hologramm"
+                                }, 
+                                {
+                                 "name":"persist",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"writableBy",
+                                 "type":"string",
+                                 "value":"admin"
+                                }],
+                         "rotation":0,
+                         "type":"variable",
+                         "visible":true,
+                         "width":0,
+                         "x":947.333333333333,
+                         "y":786
                         }],
                  "opacity":1,
                  "properties":[
@@ -4205,7 +4321,7 @@
                                 {
                                  "name":"default",
                                  "type":"string",
-                                 "value":"https:\/\/iw6tkif7th7yp5ax2ufzkl3kce0bcuys.lambda-url.us-east-1.on.aws\/?text=HoloBooth2&imageType=caption&width=78&height=50&color=yellow\n"
+                                 "value":"https:\/\/cocreation.world"
                                 }, 
                                 {
                                  "name":"description",
@@ -4281,7 +4397,7 @@
                                 {
                                  "name":"default",
                                  "type":"string",
-                                 "value":"https:\/\/iw6tkif7th7yp5ax2ufzkl3kce0bcuys.lambda-url.us-east-1.on.aws\/?text=HoloBooth3&imageType=caption&width=78&height=50&color=yellow\n"
+                                 "value":"https:\/\/cocreation.world"
                                 }, 
                                 {
                                  "name":"description",
@@ -4357,7 +4473,7 @@
                                 {
                                  "name":"default",
                                  "type":"string",
-                                 "value":"https:\/\/iw6tkif7th7yp5ax2ufzkl3kce0bcuys.lambda-url.us-east-1.on.aws\/?text=HoloBooth4&imageType=caption&width=78&height=50&color=yellow\n"
+                                 "value":"https:\/\/cocreation.world"
                                 }, 
                                 {
                                  "name":"description",
@@ -4433,7 +4549,7 @@
                                 {
                                  "name":"default",
                                  "type":"string",
-                                 "value":"https:\/\/iw6tkif7th7yp5ax2ufzkl3kce0bcuys.lambda-url.us-east-1.on.aws\/?text=HoloBooth5&imageType=caption&width=78&height=50&color=yellow\n"
+                                 "value":"https:\/\/cocreation.world"
                                 }, 
                                 {
                                  "name":"description",
@@ -4509,7 +4625,7 @@
                                 {
                                  "name":"default",
                                  "type":"string",
-                                 "value":"https:\/\/iw6tkif7th7yp5ax2ufzkl3kce0bcuys.lambda-url.us-east-1.on.aws\/?text=HoloBooth6&imageType=caption&width=78&height=50&color=yellow"
+                                 "value":"https:\/\/cocreation.world"
                                 }, 
                                 {
                                  "name":"description",
@@ -5552,7 +5668,7 @@
          "y":0
         }],
  "nextlayerid":134,
- "nextobjectid":414,
+ "nextobjectid":420,
  "orientation":"orthogonal",
  "properties":[
         {
