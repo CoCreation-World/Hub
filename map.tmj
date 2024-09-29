@@ -3724,9 +3724,19 @@
                  "name":"holo1-website",
                  "properties":[
                         {
-                         "name":"openWebsite",
+                         "name":"openTab",
                          "type":"string",
                          "value":"{{{ holo1-url }}}"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"press [SPACE], and open a new Tab to learn more about \"{{{ holo1-text }}}\""
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3775,9 +3785,19 @@
                  "name":"holo2-website",
                  "properties":[
                         {
-                         "name":"openWebsite",
+                         "name":"openTab",
                          "type":"string",
                          "value":"{{{ holo2-url }}}"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"press [SPACE], and open a new Tab to learn more about \"{{{ holo2-text }}}\""
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3809,9 +3829,19 @@
                  "name":"holo4-website",
                  "properties":[
                         {
-                         "name":"openWebsite",
+                         "name":"openTab",
                          "type":"string",
                          "value":"{{{ holo4-url }}}"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"press [SPACE], and open a new Tab to learn more about \"{{{ holo4-text }}}\""
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3843,9 +3873,19 @@
                  "name":"holo3-website",
                  "properties":[
                         {
-                         "name":"openWebsite",
+                         "name":"openTab",
                          "type":"string",
                          "value":"{{{ holo3-url }}}"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"press [SPACE], and open a new Tab to learn more about \"{{{ holo3-text }}}\""
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3877,9 +3917,19 @@
                  "name":"holo5-website",
                  "properties":[
                         {
-                         "name":"openWebsite",
+                         "name":"openTab",
                          "type":"string",
                          "value":"{{{ holo5-url }}}"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"press [SPACE], and open a new Tab to learn more about \"{{{ holo5-text }}}\""
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3911,9 +3961,19 @@
                  "name":"holo6-website",
                  "properties":[
                         {
-                         "name":"openWebsite",
+                         "name":"openTab",
                          "type":"string",
                          "value":"{{{ holo6-url }}}"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"press [SPACE], and open a new Tab to learn more about \"{{{ holo6-text }}}\""
                         }],
                  "rotation":0,
                  "type":"area",
