@@ -4046,7 +4046,7 @@
                 {
                  "height":60,
                  "id":419,
-                 "name":"hh",
+                 "name":"makerspaceBillboard",
                  "properties":[
                         {
                          "name":"url",
@@ -4083,7 +4083,7 @@
                                 {
                                  "name":"default",
                                  "type":"string",
-                                 "value":"Today is a good day to get something done"
+                                 "value":"Today is a good day to get something done."
                                 }, 
                                 {
                                  "name":"description",
