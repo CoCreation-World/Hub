@@ -70,23 +70,23 @@ WA.onInit().then(() => {
     }
 });
 
-//WA.onInit().then(async () => {
-  //  if (!WA.player.tags.includes("member")) {
-        //const playerName = WA.player.name; // Declare and initialize the 'playerName' variable
-        //WA.ui.banner.openBanner({
-         //   id: "banner-exploration",
-           // text: `Welcome ${encodeURIComponent(playerName)} You are not signed in as a member. Please sign in or register to access all features.`,
-           // bgColor: "#ff00ff",
-           // textColor: "#000000",
-            //closable: false,
-          //  timeToClose: 0,
-           // link: {
-            //    label: "CLICK HERE",
-           //     url: "https://forum.cocreation.world/login"
-          //  }
-       // });
-   // }
-//});
+WA.onInit().then(async () => {
+  if (!WA.player.tags.includes("member")) {
+        const playerName = WA.player.name; // Declare and initialize the 'playerName' variable
+        WA.ui.banner.openBanner({
+           id: "banner-exploration",
+            text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
+            bgColor: "#1B1B29",
+            textColor: "#FFFFFF",
+            closable: true,
+            timeToClose: 0,
+            link: {
+                label: "CLICK HERE",
+                url: "https://world.cocreation.world/login"
+            }
+        });
+    }
+});
 WA.onInit().then(async () => {
     // Check if the player has the "admin" tag
     if (!WA.player.tags.includes("bot") && !WA.player.tags.includes("member")) {
@@ -232,5 +232,32 @@ WA.onInit().then(() => {
 WA.state.onVariableChange('makerMeet').subscribe(() => {
     updateMakerMeet();
 });
+
+    // Add action bar button 'Register'.
+    WA.onInit().then(() => {
+        let isModalOpen = false;
+
+        WA.ui.actionBar.addButton({
+            id: 'calender',
+            type: 'action',
+            imageSrc: 'https://minio-production-fa1d.up.railway.app/typebot/public/workspaces/clwxv3blz001hp28kvtibhtth/typebots/clzqtjvdr0001dvthgytin9cu/blocks/b0qczozh0s0f8tcj821pufod?v=1727883058553',
+            toolTip: 'Calender',
+            callback: () => {
+                if (isModalOpen) {
+                    WA.ui.modal.closeModal();
+                    isModalOpen = false;
+                } else {
+                    WA.ui.modal.openModal({
+                        title: "Calender",
+                        src: 'https://forum.cocreation.world/c/cal/23',
+                        allow: "fullscreen",
+                        allowApi: true,
+                        position: "right"
+                    });
+                    isModalOpen = true;
+                }
+            }
+        });
+    });
 export { };
 

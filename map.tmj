@@ -3983,9 +3983,9 @@
                  "y":1344.41635434783
                 }, 
                 {
-                 "height":252,
+                 "height":236.688697845435,
                  "id":411,
-                 "name":"makerspaceJitsi",
+                 "name":"MeetingArea",
                  "properties":[
                         {
                          "name":"focusable",
@@ -3993,9 +3993,19 @@
                          "value":true
                         }, 
                         {
+                         "name":"jitsiConfig",
+                         "type":"string",
+                         "value":"{    \n  \"toolbarButtons\": [\n    \"camera\",\n    \"closedcaptions\",\n    \"settings\",\n    \"etherpad\",\n    \"microphone\",\n    \"raisehand\",\n    \"desktop\"\n  ],\n  \"transcription\": {\n    \"enabled\": true,\n    \"translationLanguages\": [\"en\", \"es\", \"fr\", \"ro\"],\n    \"translationLanguagesHead\": [\"en\"],\n    \"useAppLanguage\": true,\n    \"preferredLanguage\": \"en-US\",\n    \"autoTranscribeOnRecord\": false\n  }\n}"
+                        }, 
+                        {
+                         "name":"jitsiInterfaceConfig",
+                         "type":"string",
+                         "value":"{\n\"DEFAULT_BACKGROUND\": \"#1B1B29\"\n}"
+                        }, 
+                        {
                          "name":"jitsiRoom",
                          "type":"string",
-                         "value":"Makerspace"
+                         "value":"Meetingarea"
                         }, 
                         {
                          "name":"zoom_margin",
@@ -4005,9 +4015,9 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":352,
-                 "x":962,
-                 "y":603
+                 "width":293.011327286905,
+                 "x":540.712074287427,
+                 "y":602.800332381141
                 }, 
                 {
                  "height":50,
@@ -4059,6 +4069,33 @@
                  "width":122,
                  "x":1171.00805979434,
                  "y":528.004702225088
+                }, 
+                {
+                 "height":252,
+                 "id":420,
+                 "name":"makerspaceJitsi",
+                 "properties":[
+                        {
+                         "name":"focusable",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"jitsiRoom",
+                         "type":"string",
+                         "value":"Makerspace"
+                        }, 
+                        {
+                         "name":"zoom_margin",
+                         "type":"float",
+                         "value":1
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":352,
+                 "x":967.8100233249,
+                 "y":584.019520926651
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5728,7 +5765,7 @@
          "y":0
         }],
  "nextlayerid":134,
- "nextobjectid":420,
+ "nextobjectid":421,
  "orientation":"orthogonal",
  "properties":[
         {
