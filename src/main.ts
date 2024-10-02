@@ -81,6 +81,7 @@ WA.onInit().then(() => {
                 position: "center"
             }) 
             popup.close();
+            
             {
                 if (!WA.player.tags.includes("member")) {
                     WA.controls.restorePlayerControls();
@@ -103,8 +104,7 @@ WA.onInit().then(() => {
                     WA.controls.restorePlayerProximityMeeting();
                     WA.controls.restoreScreenSharing();
                 }
-            }
-        },
+            } },
         
     }]    )
 });
