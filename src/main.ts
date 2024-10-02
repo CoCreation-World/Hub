@@ -238,10 +238,10 @@ WA.state.onVariableChange('makerMeet').subscribe(() => {
         let isModalOpen = false;
 
         WA.ui.actionBar.addButton({
-            id: 'calender',
+            id: 'calendar',
             type: 'action',
             imageSrc: 'https://minio-production-fa1d.up.railway.app/typebot/public/workspaces/clwxv3blz001hp28kvtibhtth/typebots/clzqtjvdr0001dvthgytin9cu/blocks/b0qczozh0s0f8tcj821pufod?v=1727883058553',
-            toolTip: 'Calender',
+            toolTip: 'Calendar',
             callback: () => {
                 if (isModalOpen) {
                     WA.ui.modal.closeModal();
