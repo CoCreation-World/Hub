@@ -71,7 +71,7 @@ WA.onInit().then(() => {
         const playerLanguage = WA.player.language;
         const wokaurl = await WA.player.getWokaPicture();
 
-        var boturl = `https://chat.cocreation.world/c3omat?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
+        var boturl = `https://chat.cocreation.world/c3-o-mat?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
 
             WA.ui.modal.openModal({
                 title: "Welcome",
