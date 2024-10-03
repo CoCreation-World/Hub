@@ -1,6 +1,6 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
-import { bootstrapExtra } from "@workadventure/scripting-api-extra";
+import { bootstrapExtra, RemotePlayer } from "@workadventure/scripting-api-extra";
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.log('Scripting API ready');
@@ -71,7 +71,7 @@ WA.onInit().then(() => {
         const playerLanguage = WA.player.language;
         const wokaurl = await WA.player.getWokaPicture();
 
-        var boturl = `https://chat.cocreation.world/ccw?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
+        var boturl = `https://chat.cocreation.world/c3omat?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
 
             WA.ui.modal.openModal({
                 title: "Welcome",
@@ -293,5 +293,8 @@ WA.state.onVariableChange('makerMeet').subscribe(() => {
             }
         });
     });
+;
+        
+
 export { };
 
