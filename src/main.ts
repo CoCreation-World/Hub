@@ -295,6 +295,18 @@ WA.state.onVariableChange('makerMeet').subscribe(() => {
     });
 ;
         
+        WA.onInit().then(() => {
+            WA.ui.actionBar.addButton({
+                id: 'contact',
+                type: 'action',
+                imageSrc: 'https://minio-production-fa1d.up.railway.app/typebot/public/workspaces/clwxv3blz001hp28kvtibhtth/typebots/clzqtjvdr0001dvthgytin9cu/blocks/ju9avkxx9u3rfb45hsika0s4?v=1727964643138',
+                toolTip: 'Contact',
+                callback: async () => {
+                    const menu = await WA.ui.getMenuCommand("contact");
+                    menu.open();
+                }
+            });
+        });
 
 export { };
 
