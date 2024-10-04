@@ -4,7 +4,7 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.log('Scripting API ready');
-    console.log('Player tags: ',WA.player.tags)
+    console.log('Player tags: ', WA.player.tags);
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
@@ -12,10 +12,60 @@ WA.onInit().then(() => {
 }).catch(e => console.error(e));
 
 console.log('Script started successfully');
-
-
 WA.onInit().then(async () => {
-    WA.room.hideLayer('FG Interior/godray');
+    WA.camera.set(700, 1000, 800, 800, false, false, 10);
+    WA.camera.set(700, 1700, 700, 700, false, true, 5000);
+    const position = await WA.player.getPosition();
+    const playerName = WA.player.name;
+    const playerLanguage = WA.player.language;
+    const wokaurl = await WA.player.getWokaPicture();
+
+
+    function restoreMemberControls() {
+        WA.controls.restorePlayerControls();
+        WA.controls.restoreMicrophone();
+        WA.controls.restoreWebcam();
+        WA.controls.restoreWheelZoom();
+        WA.controls.restoreRightClick();
+        WA.controls.restoreInviteButton();
+        WA.controls.restoreMapEditor();
+        WA.controls.restoreRoomList();
+        WA.controls.restorePlayerProximityMeeting();
+        WA.controls.restoreScreenSharing();
+    }
+
+    function nonMemberControls() {
+        WA.controls.restorePlayerControls();
+        WA.controls.restorePlayerProximityMeeting();
+        WA.controls.restoreScreenSharing();
+        WA.controls.restoreWheelZoom();
+        WA.controls.restoreMicrophone();
+        WA.controls.restoreWebcam();
+        WA.controls.restoreRightClick();
+
+        WA.ui.banner.openBanner({
+            id: "banner-exploration",
+            text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
+            bgColor: "#1B1B29",
+            textColor: "#FFFFFF",
+            closable: true,
+            timeToClose: 0,
+            link: {
+                label: "CLICK HERE",
+                url: "https://world.cocreation.world/login"
+            }
+        });
+    }
+
+    function turnCameraToSpawn() {
+        WA.camera.set(position.x, position.y, 200, 200, false, true, 5000);
+        new Promise(resolve => setTimeout(resolve, 5000)).then(() => {
+            WA.camera.followPlayer(true);
+            WA.controls.restoreWheelZoom();
+        });
+    }
+
+    // Step 2: Disable controls
     WA.controls.disablePlayerControls();
     WA.controls.disableMicrophone();
     WA.controls.disableWebcam();
@@ -26,133 +76,62 @@ WA.onInit().then(async () => {
     WA.controls.disableRoomList();
     WA.controls.disablePlayerProximityMeeting();
     WA.controls.disableScreenSharing();
-    WA.camera.set(1055, 1837, 10000, 10000, false, false, 1000);
-    const position = await WA.player.getPosition();
-    WA.camera.set(position.x, position.y, 250, 250, false, true, 10000);
-    await new Promise(resolve => setTimeout(resolve, 10000));
-    WA.controls.restoreWheelZoom();
-    WA.camera.set(position.x, position.y, 250, 250, false, false, 10);
-    WA.camera.followPlayer(true);
-    WA.room.showLayer('FG Interior/godray') // Wait for 10000ms
-    // Open the tutorial popup after the camera set time
-    WA.ui.openPopup("popupRectangle", 'Welcome to \n CoCreation.World \n  Would you like to experience the tutorial first?', [{
-        label: "👎 no",
-        className: "error",
-        callback: (popup) => {
-            // Close the popup when the "Close" button is pressed.
-            popup.close();
-            {
-                if (!WA.player.tags.includes("member")) {
-                    WA.controls.restorePlayerControls();
-                    WA.controls.restorePlayerProximityMeeting();
-                    WA.controls.restoreScreenSharing();
-                    WA.controls.restoreMicrophone();
-                    WA.controls.restoreWebcam();
-                    WA.controls.restoreRightClick();
-                    
-WA.onInit().then(async () => {
-    if (!WA.player.tags.includes("member")) {
-          const playerName = WA.player.name; // Declare and initialize the 'playerName' variable
-          WA.ui.banner.openBanner({
-             id: "banner-exploration",
-              text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
-              bgColor: "#1B1B29",
-              textColor: "#FFFFFF",
-              closable: true,
-              timeToClose: 0,
-              link: {
-                  label: "CLICK HERE",
-                  url: "https://world.cocreation.world/login"
-              }
-          });
-      }
 
-  }); 
+    // Step 3: Display popupRectangle
+
+    new Promise(resolve => setTimeout(resolve, 3000)).then(() => {
+        WA.ui.openPopup("popupRectangle", 'Welcome to \n CoCreation.World \n  Would you like to experience the tutorial first?', [{
+            label: "👎 no",
+            className: "error",
+            callback: async (popup) => {
+                popup.close();
+                turnCameraToSpawn();
+                if (!WA.player.tags.includes("member")) {
+                    nonMemberControls();
                 } else {
-                    WA.controls.restorePlayerControls();
-                    WA.controls.restoreMicrophone();
-                    WA.controls.restoreWebcam();
-                    WA.controls.restoreRightClick();
-                    WA.controls.restoreInviteButton();
-                    WA.controls.restoreMapEditor();
-                    WA.controls.restoreRoomList();
-                    WA.controls.restorePlayerProximityMeeting();
-                    WA.controls.restoreScreenSharing();
+                    restoreMemberControls();
                 }
             }
         },
-    },
-    {
-        label: "👍 yes",
-        className: "warning",
-        callback: async (popup) => {
-            const playerName = WA.player.name;
-            const playerLanguage = WA.player.language;
-            const wokaurl = await WA.player.getWokaPicture();
-            var boturl = `https://chat.cocreation.world/c3-o-mat?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
-            WA.ui.modal.openModal({
-                title: "Welcome",
-                src: boturl,
-                allow: "fullscreen",
-                allowApi: true,
-                position: "center"
-            }) 
-            popup.close();
-            {
-                if (!WA.player.tags.includes("member")) {
-                    WA.controls.restorePlayerControls();
-                    WA.controls.restorePlayerProximityMeeting();
-                    WA.controls.restoreScreenSharing();
-                    WA.controls.restoreMicrophone();
-                    WA.controls.restoreWebcam();
-                    WA.controls.restoreRightClick(); 
-
-WA.onInit().then(async () => {
-    if (!WA.player.tags.includes("member")) {
-          const playerName = WA.player.name; // Declare and initialize the 'playerName' variable
-          WA.ui.banner.openBanner({
-             id: "banner-exploration",
-              text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
-              bgColor: "#1B1B29",
-              textColor: "#FFFFFF",
-              closable: true,
-              timeToClose: 0,
-              link: {
-                  label: "CLICK HERE",
-                  url: "https://world.cocreation.world/login"
-              }
-          });
-      }
-  });
-                } else {
-                    WA.controls.restorePlayerControls();
-                    WA.controls.restoreMicrophone();
-                    WA.controls.restoreWebcam();
-                    WA.controls.restoreRightClick();
-                    WA.controls.restoreInviteButton();
-                    WA.controls.restoreMapEditor();
-                    WA.controls.restoreRoomList();
-                    WA.controls.restorePlayerProximityMeeting();
-                    WA.controls.restoreScreenSharing();
+        {
+            label: "👍 yes",
+            className: "warning",
+            callback: async (popup) => {
+                console.log('popup closed');
+                popup.close();
+                WA.ui.modal.openModal({
+                    title: "Welcome",
+                    src: `https://chat.cocreation.world/c3-o-mat?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`,
+                    allow: "fullscreen",
+                    allowApi: true,
+                    position: "center",
+                });
+                {
+                    turnCameraToSpawn();
+                    if (!WA.player.tags.includes("member")) {
+                        nonMemberControls();
+                    } else {
+                        restoreMemberControls();
+                    }
                 }
             }
-        },
-    }]);
-});
-    WA.room.area.onEnter('showRoof').subscribe(() => {
+        }]);
+        
+    })});
+WA.room.area.onEnter('showRoof').subscribe(() => {
         WA.room.showLayer('FG Exterior/Roof');
         WA.room.showLayer('FG Exterior/glasswall');
     });
-    WA.room.area.onLeave('showRoof').subscribe(() => {
-        WA.room.hideLayer('FG Exterior/Roof');
-        WA.room.hideLayer('FG Exterior/glasswall');
-    });
-    WA.room.area.onEnter('topLeft').subscribe(() => {
-        WA.room.showLayer('FG Exterior/roofTransp');
-    });
-    WA.room.area.onLeave('topLeft').subscribe(() => {
-        WA.room.hideLayer('FG Exterior/roofTransp');
-    });
+WA.room.area.onLeave('showRoof').subscribe(() => {
+    WA.room.hideLayer('FG Exterior/Roof');
+    WA.room.hideLayer('FG Exterior/glasswall');
+});
+WA.room.area.onEnter('topLeft').subscribe(() => {
+    WA.room.showLayer('FG Exterior/roofTransp');
+});
+WA.room.area.onLeave('topLeft').subscribe(() => {
+    WA.room.hideLayer('FG Exterior/roofTransp');
+});
 
 
 WA.onInit().then(() => {
@@ -176,14 +155,14 @@ async function updateTitle(variableName: string) {
     console.log(`Title for ${variableName} has been changed to ${website.url}`);
 };
 
-WA.onInit().then(() => { 
-    updateTitle('holo1-text'); 
-    updateTitle('holo2-text'); 
-    updateTitle('holo3-text'); 
-    updateTitle('holo4-text'); 
-    updateTitle('holo5-text'); 
-    updateTitle('holo6-text'); 
-    updateTitle('makerHolo-text'); 
+WA.onInit().then(() => {
+    updateTitle('holo1-text');
+    updateTitle('holo2-text');
+    updateTitle('holo3-text');
+    updateTitle('holo4-text');
+    updateTitle('holo5-text');
+    updateTitle('holo6-text');
+    updateTitle('makerHolo-text');
 });
 
 // Listen for changes to each text variable
@@ -214,8 +193,8 @@ async function updateBillboardText() {
     console.log(`Title for makerspacebillboardText has been changed to ${website.url}`);
 };
 
-WA.onInit().then(() => { 
-    updateBillboardText(); 
+WA.onInit().then(() => {
+    updateBillboardText();
 });
 WA.state.onVariableChange('makerspacebillboardText').subscribe(() => {
     console.log(`makerspacebillboardText variable changed`);
@@ -241,87 +220,86 @@ async function updateMakerMeet() {
     }
 }
 
-WA.onInit().then(() => { 
-    updateMakerMeet(); 
+WA.onInit().then(() => {
+    updateMakerMeet();
 });
 WA.state.onVariableChange('makerMeet').subscribe(() => {
     updateMakerMeet();
 });
-    WA.onInit().then(() => {
-        let isModalOpen = false;
-        WA.ui.actionBar.addButton({
-            id: 'calendar',
-            type: 'action',
-            imageSrc: 'https://minio-production-fa1d.up.railway.app/typebot/public/workspaces/clwxv3blz001hp28kvtibhtth/typebots/clzqtjvdr0001dvthgytin9cu/blocks/b0qczozh0s0f8tcj821pufod?v=1727883058553',
-            toolTip: 'Calendar',
-            callback: () => {
-                if (isModalOpen) {
-                    WA.ui.modal.closeModal();
-                    isModalOpen = false;
-                } else {
-                    WA.ui.modal.openModal({
-                        title: "Calender",
-                        src: 'https://forum.cocreation.world/c/cal/23',
-                        allow: "fullscreen",
-                        allowApi: true,
-                        position: "right"
-                    });
-                    isModalOpen = true;
-                }
-            }
-        });
-    });
-;
-        
-        WA.onInit().then(() => {
-            WA.ui.actionBar.addButton({
-                id: 'contact',
-                type: 'action',
-                imageSrc: 'https://minio-production-fa1d.up.railway.app/typebot/public/workspaces/clwxv3blz001hp28kvtibhtth/typebots/clzqtjvdr0001dvthgytin9cu/blocks/ju9avkxx9u3rfb45hsika0s4?v=1727964643138',
-                toolTip: 'Contact',
-                callback: async () => {
-                    const menu = await WA.ui.getMenuCommand("contact");
-                    menu.open();
-                }
-            });
-        });
-        import { levelUp } from "@workadventure/quests";
-
-        WA.onInit().then(async () => {
-            const currentEpochTime = Math.floor(Date.now() / 1000); // current time in seconds
-            console.log(`⌚ Login-QUEST:Current epoch time: ${currentEpochTime}`);
-            
-            const lastVisit = await WA.player.state.lastVisit;
-            console.log(`⌚ Login-QUEST:Last visit time: ${lastVisit}`);
-
-            if (!lastVisit) {
-                // If the player does not have a lastVisit variable, set it with the current epoch time
-                await WA.player.state.saveVariable("lastVisit", currentEpochTime.toString(), { persist: true, public: true, scope: "world" });
-                console.log(`Set lastVisit to current epoch time: ${currentEpochTime}`);
+WA.onInit().then(() => {
+    let isModalOpen = false;
+    WA.ui.actionBar.addButton({
+        id: 'calendar',
+        type: 'action',
+        imageSrc: 'https://minio-production-fa1d.up.railway.app/typebot/public/workspaces/clwxv3blz001hp28kvtibhtth/typebots/clzqtjvdr0001dvthgytin9cu/blocks/b0qczozh0s0f8tcj821pufod?v=1727883058553',
+        toolTip: 'Calendar',
+        callback: () => {
+            if (isModalOpen) {
+                WA.ui.modal.closeModal();
+                isModalOpen = false;
             } else {
-                const lastVisitTime = parseInt(lastVisit as string, 10);
-                const timeDifference = currentEpochTime - lastVisitTime;
-                console.log(`⌚ Login-QUEST: Time difference since last visit: ${timeDifference} seconds`);
-
-                if (timeDifference >= 86400) { // 86400 seconds in a day
-                    // Grant XP if 24 hours or more have passed
-                    try {
-                        console.log(`⌚ Login-QUEST: Attempting to grant 25 XP for login after 24 hours`);
-                        await levelUp("LOGIN", 25); // Ensure levelUp is awaited
-                        console.log(`⌚ Login-QUEST: Successfully granted 25 XP for login after 24 hours`);
-                    } catch (error) {
-                        console.error(`⌚ Login-QUEST: Error while granting XP: ${error}`);
-                    }
-                    console.log(`⌚ Login-QUEST:: Granted 25 XP for login after 24 hours`);
-                    
-                    // Update lastVisit to current timestamp
-                    await WA.player.state.saveVariable("lastVisit", currentEpochTime.toString(), { persist: true, public: true, scope: "world" });
-                    console.log(`⌚ Login-QUEST:Updated lastVisit to current epoch time: ${currentEpochTime}`);
-                } else {
-                    console.log(`⌚ Login-QUEST: Not enough time has passed since last visit`);
-                }
+                WA.ui.modal.openModal({
+                    title: "Calender",
+                    src: 'https://forum.cocreation.world/c/cal/23',
+                    allow: "fullscreen",
+                    allowApi: true,
+                    position: "right"
+                });
+                isModalOpen = true;
             }
-        });
+        }
+    });
+});
+;
+
+WA.onInit().then(() => {
+    WA.ui.actionBar.addButton({
+        id: 'contact',
+        type: 'action',
+        imageSrc: 'https://minio-production-fa1d.up.railway.app/typebot/public/workspaces/clwxv3blz001hp28kvtibhtth/typebots/clzqtjvdr0001dvthgytin9cu/blocks/ju9avkxx9u3rfb45hsika0s4?v=1727964643138',
+        toolTip: 'Contact',
+        callback: async () => {
+            const menu = await WA.ui.getMenuCommand("contact");
+            menu.open();
+        }
+    });
+});
+import { levelUp } from "@workadventure/quests";
+
+WA.onInit().then(async () => {
+    const currentEpochTime = Math.floor(Date.now() / 1000); // current time in seconds
+    console.log(`⌚ Login-QUEST:Current epoch time: ${currentEpochTime}`);
+
+    const lastVisit = await WA.player.state.lastVisit;
+    console.log(`⌚ Login-QUEST:Last visit time: ${lastVisit}`);
+
+    if (!lastVisit) {
+        // If the player does not have a lastVisit variable, set it with the current epoch time
+        await WA.player.state.saveVariable("lastVisit", currentEpochTime.toString(), { persist: true, public: true, scope: "world" });
+        console.log(`Set lastVisit to current epoch time: ${currentEpochTime}`);
+    } else {
+        const lastVisitTime = parseInt(lastVisit as string, 10);
+        const timeDifference = currentEpochTime - lastVisitTime;
+        console.log(`⌚ Login-QUEST: Time difference since last visit: ${timeDifference} seconds`);
+
+        if (timeDifference >= 86400) { // 86400 seconds in a day
+            // Grant XP if 24 hours or more have passed
+            try {
+                console.log(`⌚ Login-QUEST: Attempting to grant 25 XP for login after 24 hours`);
+                await levelUp("LOGIN", 25); // Ensure levelUp is awaited
+                console.log(`⌚ Login-QUEST: Successfully granted 25 XP for login after 24 hours`);
+            } catch (error) {
+                console.error(`⌚ Login-QUEST: Error while granting XP: ${error}`);
+            }
+            console.log(`⌚ Login-QUEST:: Granted 25 XP for login after 24 hours`);
+
+            // Update lastVisit to current timestamp
+            await WA.player.state.saveVariable("lastVisit", currentEpochTime.toString(), { persist: true, public: true, scope: "world" });
+            console.log(`⌚ Login-QUEST:Updated lastVisit to current epoch time: ${currentEpochTime}`);
+        } else {
+            console.log(`⌚ Login-QUEST: Not enough time has passed since last visit`);
+        }
+    }
+});
 
 export { };
-
