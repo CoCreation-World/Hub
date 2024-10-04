@@ -291,7 +291,7 @@ WA.state.onVariableChange('makerMeet').subscribe(() => {
             const currentEpochTime = Math.floor(Date.now() / 1000); // current time in seconds
             console.log(`Current epoch time: ${currentEpochTime}`);
             
-            const lastVisit = await WA.player.state.loadVariable("lastVisit");
+            const lastVisit = await WA.player.state.lastVisit;
             console.log(`Last visit time: ${lastVisit}`);
 
             if (!lastVisit) {
