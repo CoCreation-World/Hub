@@ -289,10 +289,10 @@ WA.state.onVariableChange('makerMeet').subscribe(() => {
 
         WA.onInit().then(async () => {
             const currentEpochTime = Math.floor(Date.now() / 1000); // current time in seconds
-            console.log(`Current epoch time: ${currentEpochTime}`);
+            console.log(`⌚ Login-QUEST:Current epoch time: ${currentEpochTime}`);
             
             const lastVisit = await WA.player.state.lastVisit;
-            console.log(`Last visit time: ${lastVisit}`);
+            console.log(`⌚ Login-QUEST:Last visit time: ${lastVisit}`);
 
             if (!lastVisit) {
                 // If the player does not have a lastVisit variable, set it with the current epoch time
@@ -301,16 +301,24 @@ WA.state.onVariableChange('makerMeet').subscribe(() => {
             } else {
                 const lastVisitTime = parseInt(lastVisit as string, 10);
                 const timeDifference = currentEpochTime - lastVisitTime;
-                console.log(`Time difference since last visit: ${timeDifference} seconds`);
+                console.log(`⌚ Login-QUEST: Time difference since last visit: ${timeDifference} seconds`);
 
                 if (timeDifference >= 86400) { // 86400 seconds in a day
                     // Grant XP if 24 hours or more have passed
-                    levelUp("LOGIN", 25);
-                    console.log(`Granted 25 XP for login after 24 hours`);
+                    try {
+                        console.log(`⌚ Login-QUEST: Attempting to grant 25 XP for login after 24 hours`);
+                        await levelUp("LOGIN", 25); // Ensure levelUp is awaited
+                        console.log(`⌚ Login-QUEST: Successfully granted 25 XP for login after 24 hours`);
+                    } catch (error) {
+                        console.error(`⌚ Login-QUEST: Error while granting XP: ${error}`);
+                    }
+                    console.log(`⌚ Login-QUEST:: Granted 25 XP for login after 24 hours`);
                     
                     // Update lastVisit to current timestamp
                     await WA.player.state.saveVariable("lastVisit", currentEpochTime.toString(), { persist: true, public: true, scope: "world" });
-                    console.log(`Updated lastVisit to current epoch time: ${currentEpochTime}`);
+                    console.log(`⌚ Login-QUEST:Updated lastVisit to current epoch time: ${currentEpochTime}`);
+                } else {
+                    console.log(`⌚ Login-QUEST: Not enough time has passed since last visit`);
                 }
             }
         });
