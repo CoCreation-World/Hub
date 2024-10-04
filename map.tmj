@@ -4098,15 +4098,15 @@
                  "y":584.019520926651
                 }, 
                 {
-                 "height":221,
+                 "height":106,
                  "id":421,
                  "name":"popupRectangle",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":312,
-                 "x":883,
-                 "y":1678
+                 "width":300.1598038415,
+                 "x":917.922916883778,
+                 "y":1738.0835077639
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5776,7 +5776,7 @@
          "y":0
         }],
  "nextlayerid":134,
- "nextobjectid":424,
+ "nextobjectid":425,
  "orientation":"orthogonal",
  "properties":[
         {

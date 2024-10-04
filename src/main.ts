@@ -5,21 +5,17 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
-
-
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
     }).catch(e => console.error(e));
-
 }).catch(e => console.error(e));
-
 
 console.log('Script started successfully');
 
-let currentPopup: any = undefined;
 
-WA.onInit().then(() => {
+WA.onInit().then(async () => {
+    WA.room.hideLayer('FG Interior/godray');
     WA.controls.disablePlayerControls();
     WA.controls.disableMicrophone();
     WA.controls.disableWebcam();
@@ -30,8 +26,16 @@ WA.onInit().then(() => {
     WA.controls.disableRoomList();
     WA.controls.disablePlayerProximityMeeting();
     WA.controls.disableScreenSharing();
-
-    WA.ui.openPopup("popupRectangle", 'Welcome to \n CoCreation.World \n Would you like to experience the tutorial first?', [{
+    WA.camera.set(1055, 1837, 10000, 10000, false, false, 1000);
+    const position = await WA.player.getPosition();
+    WA.camera.set(position.x, position.y, 250, 250, false, true, 10000);
+    await new Promise(resolve => setTimeout(resolve, 10000));
+    WA.controls.restoreWheelZoom();
+    WA.camera.set(position.x, position.y, 250, 250, false, false, 10);
+    WA.camera.followPlayer(true);
+    WA.room.showLayer('FG Interior/godray') // Wait for 10000ms
+    // Open the tutorial popup after the camera set time
+    WA.ui.openPopup("popupRectangle", 'Welcome to \n CoCreation.World \n  Would you like to experience the tutorial first?', [{
         label: "👎 no",
         className: "error",
         callback: (popup) => {
@@ -40,17 +44,34 @@ WA.onInit().then(() => {
             {
                 if (!WA.player.tags.includes("member")) {
                     WA.controls.restorePlayerControls();
-                    WA.controls.restoreWheelZoom();
                     WA.controls.restorePlayerProximityMeeting();
                     WA.controls.restoreScreenSharing();
                     WA.controls.restoreMicrophone();
                     WA.controls.restoreWebcam();
-                    // WA.controls.restoreRightClick(); // currently deactivated. as this would allow users to sneak into closed areas.... its a WA bug. You cant walk into areas you dont have access to, using arrow keys. But you can using right click....
+                    WA.controls.restoreRightClick();
+                    
+WA.onInit().then(async () => {
+    if (!WA.player.tags.includes("member")) {
+          const playerName = WA.player.name; // Declare and initialize the 'playerName' variable
+          WA.ui.banner.openBanner({
+             id: "banner-exploration",
+              text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
+              bgColor: "#1B1B29",
+              textColor: "#FFFFFF",
+              closable: true,
+              timeToClose: 0,
+              link: {
+                  label: "CLICK HERE",
+                  url: "https://world.cocreation.world/login"
+              }
+          });
+      }
+
+  }); 
                 } else {
                     WA.controls.restorePlayerControls();
                     WA.controls.restoreMicrophone();
                     WA.controls.restoreWebcam();
-                    WA.controls.restoreWheelZoom();
                     WA.controls.restoreRightClick();
                     WA.controls.restoreInviteButton();
                     WA.controls.restoreMapEditor();
@@ -59,20 +80,16 @@ WA.onInit().then(() => {
                     WA.controls.restoreScreenSharing();
                 }
             }
-        
         },
-        
     },
     {
         label: "👍 yes",
         className: "warning",
         callback: async (popup) => {
             const playerName = WA.player.name;
-        const playerLanguage = WA.player.language;
-        const wokaurl = await WA.player.getWokaPicture();
-
-        var boturl = `https://chat.cocreation.world/c3-o-mat?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
-
+            const playerLanguage = WA.player.language;
+            const wokaurl = await WA.player.getWokaPicture();
+            var boturl = `https://chat.cocreation.world/c3-o-mat?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`;
             WA.ui.modal.openModal({
                 title: "Welcome",
                 src: boturl,
@@ -81,22 +98,36 @@ WA.onInit().then(() => {
                 position: "center"
             }) 
             popup.close();
-            
             {
                 if (!WA.player.tags.includes("member")) {
                     WA.controls.restorePlayerControls();
-                    WA.controls.restoreWheelZoom();
                     WA.controls.restorePlayerProximityMeeting();
                     WA.controls.restoreScreenSharing();
                     WA.controls.restoreMicrophone();
                     WA.controls.restoreWebcam();
-                    
-                    // WA.controls.restoreRightClick(); // currently deactivated. as this would allow users to sneak into closed areas.... its a WA bug. You cant walk into areas you dont have access to, using arrow keys. But you can using right click....
+                    WA.controls.restoreRightClick(); 
+
+WA.onInit().then(async () => {
+    if (!WA.player.tags.includes("member")) {
+          const playerName = WA.player.name; // Declare and initialize the 'playerName' variable
+          WA.ui.banner.openBanner({
+             id: "banner-exploration",
+              text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
+              bgColor: "#1B1B29",
+              textColor: "#FFFFFF",
+              closable: true,
+              timeToClose: 0,
+              link: {
+                  label: "CLICK HERE",
+                  url: "https://world.cocreation.world/login"
+              }
+          });
+      }
+  });
                 } else {
                     WA.controls.restorePlayerControls();
                     WA.controls.restoreMicrophone();
                     WA.controls.restoreWebcam();
-                    WA.controls.restoreWheelZoom();
                     WA.controls.restoreRightClick();
                     WA.controls.restoreInviteButton();
                     WA.controls.restoreMapEditor();
@@ -104,54 +135,25 @@ WA.onInit().then(() => {
                     WA.controls.restorePlayerProximityMeeting();
                     WA.controls.restoreScreenSharing();
                 }
-            } },
-        
-    }]    )
+            }
+        },
+    }]);
 });
-// Waiting for the API to be ready
-WA.onInit().then(() => {
-    console.log('Scripting API ready');
-    console.log('Player tags: ', WA.player.tags)
-
-    WA.room.area.onEnter('clock').subscribe(() => {
-        const today = new Date();
-        const time = today.getHours() + ":" + today.getMinutes();
-        currentPopup = WA.ui.openPopup("clockPopup", "It's " + time, []);
-    })
-
-    WA.room.area.onLeave('clock').subscribe(closePopup)
-
     WA.room.area.onEnter('showRoof').subscribe(() => {
         WA.room.showLayer('FG Exterior/Roof');
         WA.room.showLayer('FG Exterior/glasswall');
     });
-
     WA.room.area.onLeave('showRoof').subscribe(() => {
         WA.room.hideLayer('FG Exterior/Roof');
         WA.room.hideLayer('FG Exterior/glasswall');
     });
-
     WA.room.area.onEnter('topLeft').subscribe(() => {
         WA.room.showLayer('FG Exterior/roofTransp');
     });
-
     WA.room.area.onLeave('topLeft').subscribe(() => {
         WA.room.hideLayer('FG Exterior/roofTransp');
     });
 
-    // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
-    bootstrapExtra().then(() => {
-        console.log('Scripting API Extra ready');
-    }).catch(e => console.error(e));
-
-}).catch(e => console.error(e));
-
-function closePopup() {
-    if (currentPopup !== undefined) {
-        currentPopup.close();
-        currentPopup = undefined;
-    }
-}
 
 WA.onInit().then(() => {
     if (WA.player.tags.includes('hutriadmin')) {
@@ -159,23 +161,6 @@ WA.onInit().then(() => {
     }
 });
 
-WA.onInit().then(async () => {
-  if (!WA.player.tags.includes("member")) {
-        const playerName = WA.player.name; // Declare and initialize the 'playerName' variable
-        WA.ui.banner.openBanner({
-           id: "banner-exploration",
-            text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
-            bgColor: "#1B1B29",
-            textColor: "#FFFFFF",
-            closable: true,
-            timeToClose: 0,
-            link: {
-                label: "CLICK HERE",
-                url: "https://world.cocreation.world/login"
-            }
-        });
-    }
-});
 
 
 async function updateTitle(variableName: string) {
@@ -232,16 +217,13 @@ async function updateBillboardText() {
 WA.onInit().then(() => { 
     updateBillboardText(); 
 });
-
 WA.state.onVariableChange('makerspacebillboardText').subscribe(() => {
     console.log(`makerspacebillboardText variable changed`);
     updateBillboardText();
 });
-
 async function updateMakerMeet() {
     var makerMeetValue: string = WA.state.makerMeet as string;
     console.log(`makerMeet variable changed to ${makerMeetValue}`);
-    
     if (makerMeetValue === "") {
         const area = await WA.room.area.get('makerspaceJitsi');
         if (area) {
@@ -262,15 +244,11 @@ async function updateMakerMeet() {
 WA.onInit().then(() => { 
     updateMakerMeet(); 
 });
-
 WA.state.onVariableChange('makerMeet').subscribe(() => {
     updateMakerMeet();
 });
-
-    // Add action bar button 'Register'.
     WA.onInit().then(() => {
         let isModalOpen = false;
-
         WA.ui.actionBar.addButton({
             id: 'calendar',
             type: 'action',
@@ -307,6 +285,6 @@ WA.state.onVariableChange('makerMeet').subscribe(() => {
                 }
             });
         });
-
+       
 export { };
 
