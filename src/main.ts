@@ -285,6 +285,35 @@ WA.state.onVariableChange('makerMeet').subscribe(() => {
                 }
             });
         });
-       
+        import { levelUp } from "@workadventure/quests";
+
+        WA.onInit().then(async () => {
+            const currentEpochTime = Math.floor(Date.now() / 1000); // current time in seconds
+            console.log(`Current epoch time: ${currentEpochTime}`);
+            
+            const lastVisit = await WA.player.state.loadVariable("lastVisit");
+            console.log(`Last visit time: ${lastVisit}`);
+
+            if (!lastVisit) {
+                // If the player does not have a lastVisit variable, set it with the current epoch time
+                await WA.player.state.saveVariable("lastVisit", currentEpochTime.toString(), { persist: true, public: true, scope: "world" });
+                console.log(`Set lastVisit to current epoch time: ${currentEpochTime}`);
+            } else {
+                const lastVisitTime = parseInt(lastVisit as string, 10);
+                const timeDifference = currentEpochTime - lastVisitTime;
+                console.log(`Time difference since last visit: ${timeDifference} seconds`);
+
+                if (timeDifference >= 86400) { // 86400 seconds in a day
+                    // Grant XP if 24 hours or more have passed
+                    levelUp("LOGIN", 25);
+                    console.log(`Granted 25 XP for login after 24 hours`);
+                    
+                    // Update lastVisit to current timestamp
+                    await WA.player.state.saveVariable("lastVisit", currentEpochTime.toString(), { persist: true, public: true, scope: "world" });
+                    console.log(`Updated lastVisit to current epoch time: ${currentEpochTime}`);
+                }
+            }
+        });
+
 export { };
 
