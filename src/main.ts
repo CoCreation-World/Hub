@@ -240,7 +240,7 @@ WA.onInit().then(() => {
             } else {
                 WA.ui.modal.openModal({
                     title: "Calender",
-                    src: 'https://forum.cocreation.world/c/cal/23',
+                    src: 'https://forum.cocreation.world/upcoming-events',
                     allow: "fullscreen",
                     allowApi: true,
                     position: "right"
