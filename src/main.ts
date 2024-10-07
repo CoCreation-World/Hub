@@ -302,4 +302,35 @@ WA.onInit().then(async () => {
     }
 });
 
+const areas = ['holo', 'library', 'games', 'meeting', 'couch', 'maker', 'cowork', 'bots'];
+const discoveredAreas = new Set<string>();
+
+WA.onInit().then(async () => {
+    // Retrieve the player's discovered areas from their state
+    const playerDiscoveredAreas = await WA.player.state.discoveredAreas;
+    if (playerDiscoveredAreas) {
+        if (typeof playerDiscoveredAreas === 'string') {
+            playerDiscoveredAreas.split(',').forEach(area => discoveredAreas.add(area));
+        }
+    }
+
+    areas.forEach(area => {
+        WA.room.area.onEnter(area).subscribe(async () => {
+            if (!discoveredAreas.has(area)) {
+                discoveredAreas.add(area);
+                console.log(`Player discovered area: ${area}`);
+                try {
+                    await levelUp("EXPLORATION", 10); // Grant 10 XP for discovering an area
+                    console.log(`Granted 10 XP for discovering area: ${area}`);
+                    
+                    // Save the updated discovered areas to the player's state
+                    await WA.player.state.saveVariable("discoveredAreas", Array.from(discoveredAreas).join(','), { persist: true, public: true, scope: "world" });
+                } catch (error) {
+                    console.error(`Error while granting XP for area ${area}: ${error}`);
+                }
+            }
+        });
+    });
+});
+
 export { };

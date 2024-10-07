@@ -4107,6 +4107,72 @@
                  "width":408.20455434488,
                  "x":287.046146463658,
                  "y":1664.21634279932
+                }, 
+                {
+                 "height":284,
+                 "id":425,
+                 "name":"holo",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":502.666666666667,
+                 "x":118.906649706735,
+                 "y":1084
+                }, 
+                {
+                 "height":182.667,
+                 "id":426,
+                 "name":"library",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":609.333,
+                 "x":200.666833333333,
+                 "y":1507.33316666667
+                }, 
+                {
+                 "height":209.800296798813,
+                 "id":427,
+                 "name":"games",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":279.007894636421,
+                 "x":344.384117129532,
+                 "y":384.817892728429
+                }, 
+                {
+                 "height":257.5,
+                 "id":428,
+                 "name":"maker",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":350.028,
+                 "x":979.321382658469,
+                 "y":552.827273690905
+                }, 
+                {
+                 "height":393.18,
+                 "id":429,
+                 "name":"coworking",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":350.028,
+                 "x":936.921552257791,
+                 "y":111.868766164935
+                }, 
+                {
+                 "height":209.8,
+                 "id":430,
+                 "name":"couch",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":279.008,
+                 "x":138.214889124443,
+                 "y":578.797265210939
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5776,7 +5842,7 @@
          "y":0
         }],
  "nextlayerid":134,
- "nextobjectid":425,
+ "nextobjectid":431,
  "orientation":"orthogonal",
  "properties":[
         {
