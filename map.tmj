@@ -4176,7 +4176,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -4848,7 +4848,7 @@
          "name":"configuration",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -11945,19 +11945,6 @@
          "name":"smoke texture",
          "spacing":0,
          "tilecount":7656,
-         "tileheight":32,
-         "tilewidth":32
-        }, 
-        {
-         "columns":16,
-         "firstgid":56421,
-         "image":"..\/..\/Pixel\/kr-high-score-arcade-tileset-for-rpgs\/32px+VXACE\/Arcade_C.png",
-         "imageheight":512,
-         "imagewidth":512,
-         "margin":0,
-         "name":"Arcade_C",
-         "spacing":0,
-         "tilecount":256,
          "tileheight":32,
          "tilewidth":32
         }],
