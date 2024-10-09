@@ -13,111 +13,104 @@ WA.onInit().then(() => {
 
 console.log('Script started successfully');
 WA.onInit().then(async () => {
-    WA.camera.set(700, 1000, 800, 800, false, false, 10);
-    WA.camera.set(700, 1700, 700, 700, false, true, 5000);
-    const position = await WA.player.getPosition();
-    const playerName = WA.player.name;
-    const playerLanguage = WA.player.language;
-    const wokaurl = await WA.player.getWokaPicture();
+    if (!WA.player.tags.includes("member")) {
+        WA.camera.set(700, 1000, 800, 800, false, false, 10);
+        WA.camera.set(700, 1700, 700, 700, false, true, 5000);
+        const position = await WA.player.getPosition();
+        const playerName = WA.player.name;
+        const playerLanguage = WA.player.language;
+        const wokaurl = await WA.player.getWokaPicture();
 
-
-    function restoreMemberControls() {
-        WA.controls.restorePlayerControls();
-        WA.controls.restoreMicrophone();
-        WA.controls.restoreWebcam();
-        WA.controls.restoreWheelZoom();
-        WA.controls.restoreRightClick();
-        WA.controls.restoreInviteButton();
-        WA.controls.restoreMapEditor();
-        WA.controls.restoreRoomList();
-        WA.controls.restorePlayerProximityMeeting();
-        WA.controls.restoreScreenSharing();
-    }
-
-    function nonMemberControls() {
-        WA.controls.restorePlayerControls();
-        WA.controls.restorePlayerProximityMeeting();
-        WA.controls.restoreScreenSharing();
-        WA.controls.restoreWheelZoom();
-        WA.controls.restoreMicrophone();
-        WA.controls.restoreWebcam();
-        WA.controls.restoreRightClick();
-
-        WA.ui.banner.openBanner({
-            id: "banner-exploration",
-            text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
-            bgColor: "#1B1B29",
-            textColor: "#FFFFFF",
-            closable: true,
-            timeToClose: 0,
-            link: {
-                label: "CLICK HERE",
-                url: "https://app.cocreation.world/login"
-            }
-        });
-    }
-
-    function turnCameraToSpawn() {
-        WA.camera.set(position.x, position.y, 200, 200, false, true, 5000);
-        new Promise(resolve => setTimeout(resolve, 5000)).then(() => {
-            WA.camera.followPlayer(true);
+        function restoreMemberControls() {
+            WA.controls.restorePlayerControls();
+            WA.controls.restoreMicrophone();
+            WA.controls.restoreWebcam();
             WA.controls.restoreWheelZoom();
-        });
-    }
+            WA.controls.restoreRightClick();
+            WA.controls.restoreInviteButton();
+            WA.controls.restoreMapEditor();
+            WA.controls.restoreRoomList();
+            WA.controls.restorePlayerProximityMeeting();
+            WA.controls.restoreScreenSharing();
+        }
 
-    // Step 2: Disable controls
-    WA.controls.disablePlayerControls();
-    WA.controls.disableMicrophone();
-    WA.controls.disableWebcam();
-    WA.controls.disableWheelZoom();
-    WA.controls.disableRightClick();
-    WA.controls.disableInviteButton();
-    WA.controls.disableMapEditor();
-    WA.controls.disableRoomList();
-    WA.controls.disablePlayerProximityMeeting();
-    WA.controls.disableScreenSharing();
+        function nonMemberControls() {
+            WA.controls.restorePlayerControls();
+            WA.controls.restorePlayerProximityMeeting();
+            WA.controls.restoreScreenSharing();
+            WA.controls.restoreWheelZoom();
+            WA.controls.restoreMicrophone();
+            WA.controls.restoreWebcam();
+            WA.controls.restoreRightClick();
 
-    // Step 3: Display popupRectangle
-
-    new Promise(resolve => setTimeout(resolve, 3000)).then(() => {
-        WA.ui.openPopup("popupRectangle", 'Welcome to \n CoCreation.World \n  Would you like to experience the tutorial first?', [{
-            label: "👎 no",
-            className: "error",
-            callback: async (popup) => {
-                popup.close();
-                turnCameraToSpawn();
-                if (!WA.player.tags.includes("member")) {
-                    nonMemberControls();
-                } else {
-                    restoreMemberControls();
+            WA.ui.banner.openBanner({
+                id: "banner-exploration",
+                text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
+                bgColor: "#1B1B29",
+                textColor: "#FFFFFF",
+                closable: true,
+                timeToClose: 0,
+                link: {
+                    label: "CLICK HERE",
+                    url: "https://app.cocreation.world/login"
                 }
-            }
-        },
-        {
-            label: "👍 yes",
-            className: "warning",
-            callback: async (popup) => {
-                console.log('popup closed');
-                popup.close();
-                WA.ui.modal.openModal({
-                    title: "Welcome",
-                    src: `https://chat.cocreation.world/c3-o-mat?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`,
-                    allow: "fullscreen",
-                    allowApi: true,
-                    position: "center",
-                });
-                {
+            });
+        }
+
+        function turnCameraToSpawn() {
+            WA.camera.set(position.x, position.y, 200, 200, false, true, 5000);
+            new Promise(resolve => setTimeout(resolve, 5000)).then(() => {
+                WA.camera.followPlayer(true);
+                WA.controls.restoreWheelZoom();
+            });
+        }
+
+        // Step 2: Disable controls
+        WA.controls.disablePlayerControls();
+        WA.controls.disableMicrophone();
+        WA.controls.disableWebcam();
+        WA.controls.disableWheelZoom();
+        WA.controls.disableRightClick();
+        WA.controls.disableInviteButton();
+        WA.controls.disableMapEditor();
+        WA.controls.disableRoomList();
+        WA.controls.disablePlayerProximityMeeting();
+        WA.controls.disableScreenSharing();
+
+        // Step 3: Display popupRectangle
+
+        new Promise(resolve => setTimeout(resolve, 3000)).then(() => {
+            WA.ui.openPopup("popupRectangle", 'Welcome to \n CoCreation.World \n  Would you like to experience the tutorial first?', [{
+                label: "👎 no",
+                className: "error",
+                callback: async (popup) => {
+                    popup.close();
                     turnCameraToSpawn();
-                    if (!WA.player.tags.includes("member")) {
+                    nonMemberControls();
+                }
+            },
+            {
+                label: "👍 yes",
+                className: "warning",
+                callback: async (popup) => {
+                    console.log('popup closed');
+                    popup.close();
+                    WA.ui.modal.openModal({
+                        title: "Welcome",
+                        src: `https://chat.cocreation.world/c3-o-mat?playername=${encodeURIComponent(playerName)}&avatar=${encodeURIComponent(wokaurl)}&language=${playerLanguage}`,
+                        allow: "fullscreen",
+                        allowApi: true,
+                        position: "center",
+                    });
+                    {
+                        turnCameraToSpawn();
                         nonMemberControls();
-                    } else {
-                        restoreMemberControls();
                     }
                 }
-            }
-        }]);
-        
-    })});
+            }]);
+        });
+    }
+});
 WA.room.area.onEnter('showRoof').subscribe(() => {
         WA.room.showLayer('FG Exterior/Roof');
         WA.room.showLayer('FG Exterior/glasswall');
