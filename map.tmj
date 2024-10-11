@@ -3403,8 +3403,8 @@
                  "type":"area",
                  "visible":true,
                  "width":391.296172475245,
-                 "x":9.42188542599785,
-                 "y":11.5464667254233
+                 "x":26.7552187593312,
+                 "y":-1.78686660791004
                 }, 
                 {
                  "height":50,
@@ -4127,8 +4127,8 @@
                  "type":"area",
                  "visible":true,
                  "width":609.333,
-                 "x":200.666833333333,
-                 "y":1507.33316666667
+                 "x":121.666833333333,
+                 "y":1480.33316666667
                 }, 
                 {
                  "height":253.931752197874,
@@ -4173,6 +4173,28 @@
                  "width":279.008,
                  "x":548.543527622096,
                  "y":160.017922487934
+                }, 
+                {
+                 "height":2092.7637329193,
+                 "id":431,
+                 "name":"stone",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"stone"
+                        }, 
+                        {
+                         "name":"stepSound",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":1414.18306883509,
+                 "x":17.0650146632296,
+                 "y":24.7466924223475
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5842,7 +5864,7 @@
          "y":0
         }],
  "nextlayerid":135,
- "nextobjectid":431,
+ "nextobjectid":434,
  "orientation":"orthogonal",
  "properties":[
         {

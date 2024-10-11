@@ -59,8 +59,8 @@ WA.onInit().then(async () => {
     }
 
     function turnCameraToSpawn() {
-        WA.camera.set(position.x, position.y, 200, 200, false, true, 5000);
-        new Promise(resolve => setTimeout(resolve, 5000)).then(() => {
+        WA.camera.set(position.x, position.y, 500, 500, false, true, 1000);
+        new Promise(resolve => setTimeout(resolve, 1000)).then(() => {
             WA.camera.followPlayer(true);
             WA.controls.restoreWheelZoom();
         });
@@ -89,8 +89,10 @@ WA.onInit().then(async () => {
                 turnCameraToSpawn();
                 if (!WA.player.tags.includes("member")) {
                     nonMemberControls();
+                    turnCameraToSpawn()
                 } else {
                     restoreMemberControls();
+                    turnCameraToSpawn()
                 }
             }
         },
@@ -108,11 +110,13 @@ WA.onInit().then(async () => {
                     position: "center",
                 });
                 {
-                    turnCameraToSpawn();
+                   
                     if (!WA.player.tags.includes("member")) {
                         nonMemberControls();
+                        turnCameraToSpawn();
                     } else {
                         restoreMemberControls();
+                        turnCameraToSpawn();
                     }
                 }
             }
@@ -333,5 +337,54 @@ WA.onInit().then(async () => {
         });
     });
 });
+import { getStepSoundAreas, checkPlayerMaterial, playRandomSound, mySound } from './footstep';
 
+WA.onInit().then(async () => {
+    var areaName: any = getStepSoundAreas.name
+    let lastMaterial: string | null = null;
+    let isPlaying = false;
+
+
+    WA.player.onPlayerMove(async (event) => {
+        const playerPosition = { x: event.x, y: event.y };
+        const material = await checkPlayerMaterial(playerPosition);
+
+        if (event.moving) {
+            if (material && material !== lastMaterial) {
+                if (isPlaying) {
+                    mySound.stop();
+                    isPlaying = false;
+                }
+                playRandomSound(material);
+                lastMaterial = material;
+                isPlaying = true;
+
+            } else if (material && !isPlaying) {
+                playRandomSound(material);
+                isPlaying = true;
+
+            }
+        } else {
+            if (isPlaying) {
+                mySound.stop();
+                isPlaying = false;
+                
+                }
+            }
+            lastMaterial = null;
+        }
+    );
+
+    // Stop all sounds when leaving an area
+    WA.room.area.onLeave(`${areaName}`).subscribe(() => {
+        try {
+            console.log(`Player is leaving area: ${areaName}`);
+            mySound.stop();
+            lastMaterial = null;
+            console.log(`Player left area: ${areaName}`);
+        } catch (error) {
+            console.error(`Error while stopping sound or resetting material for area ${areaName}: ${error}`);
+        }
+    });
+});
 export { };
