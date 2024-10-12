@@ -39,7 +39,7 @@ const soundFiles = {
 };
 
 const config = {
-    volume: 0.05,
+    volume: 0.025,
     loop: false,
     rate: 1.5,
     detune: 1,
