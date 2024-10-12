@@ -3763,13 +3763,13 @@
                  "text":
                     {
                      "color":"#fffc79",
-                     "text":"Information",
+                     "text":"Info",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":80.234375,
-                 "x":425.035885832806,
+                 "x":446.998337125757,
                  "y":400.751370787517
                 }],
          "opacity":1,
