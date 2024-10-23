@@ -1,7 +1,9 @@
-/// <reference types="@workadventure/iframe-api-typings" />
+
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import {botName} from "./main";
-
+export default {
+    run: async (metadata: any) => {
+  
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');}).catch(e => console.error(e));
@@ -50,4 +52,6 @@ WA.chat.onChatMessage(
     {
         scope: "bubble",
     }
-)});
+)}),
+    console.log("COUCOU", metadata);
+}}
