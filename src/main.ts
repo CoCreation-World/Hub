@@ -1,6 +1,4 @@
 /// <reference types="@workadventure/iframe-api-typings" />
-import {updateMyPlace} from "./places";
-import {robot} from "./robot";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 // Waiting for the API to be ready
 WA.onInit().then(() => {
@@ -395,41 +393,4 @@ let botName: string;
 WA.onInit().then(async () => {
     botName = await WA.player.name;
 })
-// Waiting for the API to be ready
-WA.onInit().then(async () => {
-    console.log('Player tags: ',WA.player.tags)
-
-    // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
-    await bootstrapExtra();
-
-    // Needed to avoid a bug in FF
-    // Not sure why but the iframe is not always correctly registered in the IFrameListener.
-    //await new Promise(resolve => setTimeout(resolve, 1000));
-
-    await WA.players.configureTracking({
-        players: true,
-        movement: true,
-    });
-
-
-    await updateMyPlace();
-
-    // Let's initialize the "tags" variable to expose our tags to others
-    await WA.player.state.saveVariable('tags', WA.player.tags, {
-        persist: false,
-        public: true,
-    });
-
-    //const zones = await generatePlacesPrompt();
-    //console.log("ZONES", zones);
-
-    if (WA.room.hashParameters.bot) {
-        robot.init();
-    }
-
-    /*WA.players.onPlayerEnters.subscribe((player) => {
-        console.log("PEOPLE BY ROLE", generatePeopleByRolePrompt());
-    });*/
-
-}).catch(e => console.error(e));
 export { botName };
