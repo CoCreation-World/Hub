@@ -76,6 +76,7 @@ WA.onInit().then(async () => {
     WA.controls.disableRoomList();
     WA.controls.disablePlayerProximityMeeting();
     WA.controls.disableScreenSharing();
+    
 
     // Step 3: Display popupRectangle
 
@@ -244,7 +245,7 @@ WA.onInit().then(() => {
             } else {
                 WA.ui.modal.openModal({
                     title: "Calender",
-                    src: 'https://forum.cocreation.world/upcoming-events',
+                    src: 'https://cocreation.world/upcoming-events',
                     allow: "fullscreen",
                     allowApi: true,
                     position: "right"
