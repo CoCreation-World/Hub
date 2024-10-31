@@ -1492,7 +1492,7 @@
                  "height":68,
                  "id":127,
                  "name":"shadow",
-                 "opacity":1,
+                 "opacity":0.98,
                  "type":"tilelayer",
                  "visible":true,
                  "width":46,
@@ -11562,7 +11562,7 @@
         {
          "columns":30,
          "firstgid":57321,
-         "image":"..\/WA-KW_Templates\/tilesets\/Hackathon\/Hackaton-Remaster-Spritesheet.png",
+         "image":"tilesets\/Hackaton-Remaster-Spritesheet.png",
          "imageheight":960,
          "imagewidth":960,
          "margin":0,
