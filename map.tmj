@@ -1492,7 +1492,7 @@
                  "height":68,
                  "id":127,
                  "name":"shadow",
-                 "opacity":0.98,
+                 "opacity":0.97,
                  "type":"tilelayer",
                  "visible":true,
                  "width":46,
@@ -11828,7 +11828,7 @@
         {
          "columns":16,
          "firstgid":58221,
-         "image":"..\/WA-KW_Templates\/tilesets\/Hackathon\/Lighting_Kit_Black.png",
+         "image":"tilesets\/Lighting_Kit_Black.png",
          "imageheight":512,
          "imagewidth":512,
          "margin":0,
