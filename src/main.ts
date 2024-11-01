@@ -394,4 +394,34 @@ let botName: string;
 WA.onInit().then(async () => {
     botName = await WA.player.name;
 })
+
+const popupAreas = ['library', 'games', 'maker', 'staff'];
+
+WA.onInit().then(() => {
+    let infoPopup: any;
+    popupAreas.forEach(area => {
+        WA.room.area.onEnter(`trigger_popup-${area}`).subscribe(() => {
+            infoPopup = WA.ui.openPopup(`popup-${area}`, 'There is more to explore for members.', [{
+                label: 'Explore',
+                className: "primary",
+                callback: () => {
+                    WA.ui.modal.openModal({
+                        title: "CCW Website",
+                        src: `https://cocreation.world/${area}`,
+                        allow: "fullscreen",
+                        allowApi: true,
+                        position: "right"
+                    });
+                }
+            }]);
+        });
+
+        WA.room.area.onLeave(`trigger_popup-${area}`).subscribe(() => {
+            infoPopup.close();
+        });
+    });
+});
+
+
 export { botName };
+
