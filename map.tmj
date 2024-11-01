@@ -2756,7 +2756,7 @@
                  "height":68,
                  "id":89,
                  "name":"cuckoo small tables",
-                 "opacity":1,
+                 "opacity":0.98,
                  "type":"tilelayer",
                  "visible":true,
                  "width":90,
