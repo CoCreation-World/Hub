@@ -3642,7 +3642,7 @@
                         {
                          "name":"jitsiRoom",
                          "type":"string",
-                         "value":"Makerspace"
+                         "value":"CoCreate"
                         }, 
                         {
                          "name":"zoom_margin",
@@ -4040,7 +4040,7 @@
                                 {
                                  "name":"default",
                                  "type":"string",
-                                 "value":"https:\/\/forum.cocreation.world\/c\/cal\/23"
+                                 "value":"https:\/\/cocreation.world"
                                 }, 
                                 {
                                  "name":"description",

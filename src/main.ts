@@ -1,5 +1,6 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
+import { levelUp } from "@workadventure/quests";
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.log('Scripting API ready');
@@ -45,11 +46,11 @@ WA.onInit().then(async () => {
 
         WA.ui.banner.openBanner({
             id: "banner-exploration",
-            text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, please log in or sign up.`,
+            text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, sign up.`,
             bgColor: "#1B1B29",
             textColor: "#FFFFFF",
             closable: true,
-            timeToClose: 0,
+            timeToClose: 10000,
             link: {
                 label: "CLICK HERE",
                 url: "https://app.cocreation.world/login"
@@ -269,7 +270,7 @@ WA.onInit().then(() => {
         }
     });
 });
-import { levelUp } from "@workadventure/quests";
+
 
 WA.onInit().then(async () => {
     const currentEpochTime = Math.floor(Date.now() / 1000); // current time in seconds
@@ -337,63 +338,6 @@ WA.onInit().then(async () => {
         });
     });
 });
-import { getStepSoundAreas, checkPlayerMaterial, playRandomSound, mySound } from './footstep';
-
-WA.onInit().then(async () => {
-    var areaName: any = getStepSoundAreas.name
-    let lastMaterial: string | null = null;
-    let isPlaying = false;
-
-
-    WA.player.onPlayerMove(async (event) => {
-        const playerPosition = { x: event.x, y: event.y };
-        const material = await checkPlayerMaterial(playerPosition);
-
-        if (event.moving) {
-            if (material && material !== lastMaterial) {
-                if (isPlaying) {
-                    mySound.stop();
-                    isPlaying = false;
-                }
-                playRandomSound(material);
-                lastMaterial = material;
-                isPlaying = true;
-
-            } else if (material && !isPlaying) {
-                playRandomSound(material);
-                isPlaying = true;
-
-            }
-        } else {
-            if (isPlaying) {
-                mySound.stop();
-                isPlaying = false;
-                
-                }
-            }
-            lastMaterial = null;
-        }
-    );
-
-    // Stop all sounds when leaving an area
-    WA.room.area.onLeave(`${areaName}`).subscribe(() => {
-        try {
-            console.log(`Player is leaving area: ${areaName}`);
-            mySound.stop();
-            lastMaterial = null;
-            console.log(`Player left area: ${areaName}`);
-        } catch (error) {
-            console.error(`Error while stopping sound or resetting material for area ${areaName}: ${error}`);
-        }
-    });
-});
-
-
-let botName: string;
-
-WA.onInit().then(async () => {
-    botName = await WA.player.name;
-})
 
 const popupAreas = ['library', 'games', 'maker', 'staff'];
 
@@ -423,5 +367,5 @@ WA.onInit().then(() => {
 });
 
 
-export { botName };
+export { };
 
