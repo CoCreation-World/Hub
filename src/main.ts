@@ -366,6 +366,9 @@ WA.onInit().then(() => {
     });
 });
 
-
-export { };
+let botName: string;
+WA.onInit().then(async () => {
+    botName = await WA.player.name;
+})
+export { botName };
 
