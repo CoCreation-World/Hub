@@ -3771,6 +3771,23 @@
                  "width":80.234375,
                  "x":446.998337125757,
                  "y":400.751370787517
+                }, 
+                {
+                 "height":12.5454545454545,
+                 "id":451,
+                 "name":"track",
+                 "properties":[
+                        {
+                         "name":"url",
+                         "type":"string",
+                         "value":"https:\/\/cocreation.world\/pub\/tracker-hub-visits"
+                        }],
+                 "rotation":0,
+                 "type":"website",
+                 "visible":false,
+                 "width":13.3333333333335,
+                 "x":1.16666666666652,
+                 "y":2162.19696969697
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5561,7 +5578,7 @@
          "y":0
         }],
  "nextlayerid":137,
- "nextobjectid":451,
+ "nextobjectid":452,
  "orientation":"orthogonal",
  "properties":[
         {
