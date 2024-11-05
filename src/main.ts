@@ -370,5 +370,23 @@ let botName: string;
 WA.onInit().then(async () => {
     botName = await WA.player.name;
 })
+
+WA.chat.onChatMessage((message, event) => {
+    if (event.authorId === undefined) {
+        fetch('https://cocreation.world/chat/hooks/24e210d4fa381713b15245c5.json', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ text: message })
+        }).then(response => {
+            if (!response.ok) {
+                console.error('Failed to send message to webhook');
+            }
+        }).catch(error => {
+            console.error('Error sending message to webhook:', error);
+        });
+    }
+}, { scope: 'local' });
 export { botName };
 
