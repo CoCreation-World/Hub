@@ -371,8 +371,7 @@ WA.onInit().then(async () => {
     botName = await WA.player.name;
 })
 
-WA.chat.onChatMessage((message, event) => {
-    if (event.authorId === undefined) {
+WA.chat.onChatMessage((message) => {{
         fetch('https://cocreation.world/chat/hooks/24e210d4fa381713b15245c5.json', {
             method: 'POST',
             mode: 'no-cors',
