@@ -375,8 +375,15 @@ WA.chat.onChatMessage((message, event) => {
     if (event.authorId === undefined) {
         fetch('https://cocreation.world/chat/hooks/24e210d4fa381713b15245c5.json', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
+                'Origin': 'cocreation.world',
+                "Access-Control-Allow-Origin": "*",
+                "Host": "https://cocreation.world",
+                'Accept':'*/*',
+                'Accept-Encoding':'gzip, deflate, br',
+                "Connection": "keep-alive",
             },
             body: JSON.stringify({ text: message })
         }).then(response => {
