@@ -370,5 +370,23 @@ let botName: string;
 WA.onInit().then(async () => {
     botName = await WA.player.name;
 })
+WA.chat.onChatMessage(async (message) => {
+    const playerName = await WA.player.name;
+    const formattedMessage = `${playerName} wrote: ${message}`;
+    fetch('https://nocode.newit.works/api/v1/webhooks/jA2Ws4K5maFckdYmEpzwy', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text: formattedMessage })
+    }).then(response => {
+        if (!response.ok) {
+            console.error('Failed to send message to webhook');
+        }
+    }).catch(error => {
+        console.error('Error sending message to webhook:', error);
+    });
+}, { scope: 'local' });
+
 export { botName };
 
