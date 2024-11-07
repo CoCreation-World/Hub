@@ -233,30 +233,16 @@ WA.state.onVariableChange('makerMeet').subscribe(() => {
     updateMakerMeet();
 });
 WA.onInit().then(() => {
-    let isModalOpen = false;
     WA.ui.actionBar.addButton({
         id: 'calendar',
         type: 'action',
         imageSrc: 'https://minio-production-fa1d.up.railway.app/typebot/public/workspaces/clwxv3blz001hp28kvtibhtth/typebots/clzqtjvdr0001dvthgytin9cu/blocks/b0qczozh0s0f8tcj821pufod?v=1727883058553',
         toolTip: 'Calendar',
         callback: () => {
-            if (isModalOpen) {
-                WA.ui.modal.closeModal();
-                isModalOpen = false;
-            } else {
-                WA.ui.modal.openModal({
-                    title: "Calender",
-                    src: 'https://cocreation.world/upcoming-events',
-                    allow: "fullscreen",
-                    allowApi: true,
-                    position: "right"
-                });
-                isModalOpen = true;
+                WA.nav.openTab('https://cocreation.world/upcoming-events');
             }
-        }
+        })
     });
-});
-;
 
 WA.onInit().then(() => {
     WA.ui.actionBar.addButton({
