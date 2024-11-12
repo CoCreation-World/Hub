@@ -374,30 +374,33 @@ WA.chat.onChatMessage(async (message) => {
     });
 }, { scope: 'local' });
 
-WA.onInit().then(() => {
-async function updateFocus() {
-    var focusValue: string = WA.state.focus as string;
-    const focusArea = await WA.room.area.get('focusArea');
-    if (focusArea) {
-        if (focusValue === "1") {
-         
-            focusArea.height = 88;
-            focusArea.width = 88;
-            console.log(`Area 'focusArea' resized to height: 88, width: 88`);
-        } if (focusValue === "") {
-          
-            focusArea.height = 0;
-            focusArea.width = 0;
-            console.log(`Area 'focusArea' resized to 0`);
+
+async function updateFocusAreas() {
+    const focusValue: string = WA.state.focus as string;
+    const focusAreas = ['focusArea-1', 'focusArea-2', 'focusArea-3', 'focusArea-4'];
+
+    for (const areaName of focusAreas) {
+        const focusArea = await WA.room.area.get(areaName);
+        if (focusArea) {
+            if (focusValue === "1") {
+                focusArea.height = 88;
+                focusArea.width = 88;
+                console.log(`Area '${areaName}' resized to height: 88, width: 88`);
+            } else if (focusValue === "") {
+                focusArea.height = 0;
+                focusArea.width = 0;
+                console.log(`Area '${areaName}' resized to 0`);
+            }
         }
     }
 }
+
 WA.onInit().then(() => {
-    updateFocus();
+    updateFocusAreas();
 });
+
 WA.state.onVariableChange('focus').subscribe(() => {
-    updateFocus();
-});
+    updateFocusAreas();
 });
 
 WA.event.on("pomo").subscribe((event) => {
