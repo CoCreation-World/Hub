@@ -46,7 +46,7 @@ WA.onInit().then(async () => {
 
         WA.ui.banner.openBanner({
             id: "banner-exploration",
-            text: `Welcome to CoCreation.World ${encodeURIComponent(playerName)}. To access the full experience, sign up.`,
+            text: `Welcome Stra(y)nger ${encodeURIComponent(playerName)}😺. To access the full experience, sign up.`,
             bgColor: "#1B1B29",
             textColor: "#FFFFFF",
             closable: true,
@@ -373,6 +373,36 @@ WA.chat.onChatMessage(async (message) => {
         console.error('Error sending message to webhook:', error);
     });
 }, { scope: 'local' });
+
+WA.onInit().then(() => {
+async function updateFocus() {
+    var focusValue: string = WA.state.focus as string;
+    const focusArea = await WA.room.area.get('focusArea');
+    if (focusArea) {
+        if (focusValue === "1") {
+         
+            focusArea.height = 88;
+            focusArea.width = 88;
+            console.log(`Area 'focusArea' resized to height: 88, width: 88`);
+        } if (focusValue === "") {
+          
+            focusArea.height = 0;
+            focusArea.width = 0;
+            console.log(`Area 'focusArea' resized to 0`);
+        }
+    }
+}
+WA.onInit().then(() => {
+    updateFocus();
+});
+WA.state.onVariableChange('focus').subscribe(() => {
+    updateFocus();
+});
+});
+
+WA.event.on("pomo").subscribe((event) => {
+    console.log("Pomo-Event received", event.data);
+});
 
 export { botName };
 
