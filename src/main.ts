@@ -403,21 +403,17 @@ WA.state.onVariableChange('focus').subscribe(() => {
     updateFocusAreas();
 });
 
-WA.event.on("pomo").subscribe((event) => {
-    console.log("Pomo-Event received", event.data);
 
-});
-WA.event.on("pomo").subscribe(async (event) => {
-    console.log("Pomo-Event received", event.data);
-    if (event.data === "break") {
-        try {
-            await levelUp("WORKATHON", 10);
-            console.log("Granted 10 XP for finishing during WORKATHON");
-        } catch (error) {
-            console.error("Error while granting XP for break during WORKATHON:", error);
-        }
+WA.player.state.onVariableChange('pomo-exp').subscribe(async (value) => {
+    console.log('Variable "pomo-exp" changed. New value: ', value);
+    try {
+        await levelUp("WORKATHON", value as number);
+        console.log(`Granted ${value} XP for WORKATHON`);
+    } catch (error) {
+        console.error("Error while granting XP for WORKATHON:", error);
     }
 });
+
 
 export { botName };
 
