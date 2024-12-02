@@ -3782,6 +3782,28 @@
                  "width":87.672,
                  "x":994.878142699207,
                  "y":289.666215942183
+                }, 
+                {
+                 "height":118.94556365195,
+                 "id":465,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"chatDescription",
+                         "type":"string",
+                         "value":"area chat description"
+                        }, 
+                        {
+                         "name":"chatName",
+                         "type":"string",
+                         "value":"Kilians-Desk"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":128.589798542649,
+                 "x":1202.31461637377,
+                 "y":1080.15430775825
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5620,7 +5642,7 @@
          "y":0
         }],
  "nextlayerid":137,
- "nextobjectid":465,
+ "nextobjectid":466,
  "orientation":"orthogonal",
  "properties":[
         {
