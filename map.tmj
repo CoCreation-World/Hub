@@ -3797,7 +3797,7 @@
                         {
                          "name":"chatName",
                          "type":"string",
-                         "value":"Kilians-Desk"
+                         "value":"General Chat"
                         }],
                  "rotation":0,
                  "type":"",
