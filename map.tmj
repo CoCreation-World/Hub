@@ -2995,11 +2995,6 @@
                          "value":"this is where visitors arrive. "
                         }, 
                         {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":"http:\/\/localhost:5173\/public\/teamodoro\/index.html"
-                        }, 
-                        {
                          "name":"openWebsiteAllowApi",
                          "type":"bool",
                          "value":true
