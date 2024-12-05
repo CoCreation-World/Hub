@@ -2993,6 +2993,16 @@
                          "name":"description",
                          "type":"string",
                          "value":"this is where visitors arrive. "
+                        }, 
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"http:\/\/localhost:5173\/public\/teamodoro\/index.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",
