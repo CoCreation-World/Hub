@@ -939,7 +939,7 @@
                  "height":68,
                  "id":8,
                  "name":"Bottom Floor",
-                 "opacity":1,
+                 "opacity":0.98,
                  "type":"tilelayer",
                  "visible":true,
                  "width":46,
