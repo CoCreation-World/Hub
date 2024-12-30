@@ -1,6 +1,7 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { levelUp } from "@workadventure/quests";
+import { setupFireworks } from "./fireworks";
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.log('Scripting API ready');
@@ -416,6 +417,6 @@ WA.player.state.onVariableChange('pomo-exp').subscribe(async (value) => {
 
 
 
-
+setupFireworks();
 export { botName };
 
